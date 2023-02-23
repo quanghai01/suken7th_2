@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="73.7" height="24.42" viewBox="0 0 73.7 24.42">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #84919e;
+      }
+
+      .cls-2 {
+        font-size: 18px;
+        font-family: rounded-l-mplus-1c-medium, rounded l-mplus-1c-medium;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <title>back-to-draw-new</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="buttons">
+      <g>
+        <polygon class="cls-1" points="8.93 14.88 11.91 13.39 22.33 2.98 20.84 1.49 10.42 11.91 8.93 14.88"/>
+        <path class="cls-1" d="M0,23.81l14.88-4.46,8.93-8.93V6l-8.93,8.93-1.81,3-6.34,2.3a5.69,5.69,0,0,0-3.08-3.07L6,10.74l3-1.81L17.86,0H13.4L4.47,8.93,0,23.81"/>
+      </g>
+      <text class="cls-2" transform="translate(37.7 18.32)">編集</text>
+    </g>
+  </g>
+</svg>

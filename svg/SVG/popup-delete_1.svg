@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="290" viewBox="0 0 640 290">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fafafa;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #0b89dd;
+      }
+
+      .cls-3 {
+        font-size: 36px;
+        font-family: rounded-mplus-1p-bold, rounded mplus-1p-bold;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        letter-spacing: -0.1em;
+      }
+
+      .cls-5 {
+        letter-spacing: -0.11em;
+      }
+
+      .cls-6 {
+        letter-spacing: -0.07em;
+      }
+
+      .cls-7 {
+        letter-spacing: -0.11em;
+      }
+
+      .cls-8 {
+        letter-spacing: -0.12em;
+      }
+
+      .cls-9 {
+        letter-spacing: -0.15em;
+      }
+
+      .cls-10 {
+        letter-spacing: -0.05em;
+      }
+
+      .cls-11 {
+        letter-spacing: -0.04em;
+      }
+
+      .cls-12 {
+        letter-spacing: -0.01em;
+      }
+
+      .cls-13 {
+        letter-spacing: -0.17em;
+      }
+    </style>
+  </defs>
+  <title>popup-delete_1</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="buttons">
+      <g>
+        <rect class="cls-1" x="2" y="2" width="636" height="286"/>
+        <path class="cls-2" d="M636,4V286H4V4H636m4-4H0V290H640V0Z"/>
+      </g>
+      <text class="cls-3" transform="translate(105.8 111.16)">削<tspan class="cls-4" x="36" y="0">除</tspan><tspan class="cls-5" x="68.4" y="0">し</tspan><tspan class="cls-6" x="100.44" y="0">て</tspan><tspan class="cls-7" x="133.92" y="0">も</tspan><tspan class="cls-8" x="165.96" y="0">よ</tspan><tspan class="cls-9" x="197.64" y="0">ろ</tspan><tspan class="cls-10" x="228.24" y="0">し</tspan><tspan class="cls-11" x="262.44" y="0">い</tspan><tspan x="297" y="0">で</tspan><tspan class="cls-12" x="333" y="0">す</tspan><tspan class="cls-13" x="368.64" y="0">か？</tspan></text>
+    </g>
+  </g>
+</svg>

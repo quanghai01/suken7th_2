@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="134.97" height="30.15" viewBox="0 0 134.97 30.15">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 18px;
+        font-family: rounded-l-mplus-1c-medium, rounded l-mplus-1c-medium;
+        font-weight: 500;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #84919e;
+      }
+    </style>
+  </defs>
+  <title>list-shape-new</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="buttons">
+      <text class="cls-1" transform="translate(44.97 21.6)">一覧を表示</text>
+      <g id="最初に戻る">
+        <path class="cls-2" d="M34.45,8.61,17.23,0,0,8.61l17.23,8.62ZM31,13.35l3.45,1.72L17.23,23.69,0,15.07l3.45-1.72,13.78,6.89Zm0,6.46,3.45,1.72L17.23,30.15,0,21.53l3.45-1.72L17.23,26.7Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

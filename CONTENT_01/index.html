@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>回転体 （パターン①）</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="./css/main.css">
+  <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+</head>
+
+<body touch-action="none" style="background-color:transparent;" oncontextmenu="return false">
+  <div id="divBody" style="position: absolute; left: 0px; top: 0px; overflow: hidden">
+    <div width="50%" height="60%" style="position: absolute; top: 10.3%; left: 50%; width: 50%; height: 68%; z-index: -1">
+      <div id="container" style="position: fixed"></div>
+    </div>
+
+    <svg id="svg_root" opacity="0" width="1024" height="648" viewBox="0 0 1024 648" id="rootSVG" xmlns="http://www.w3.org/2000/svg" style="left: 0px;">
+      <g transform="matrix(1,0,0,1,0,0)" id="background">
+        <rect width="1024" height="648" style="fill:yellow;stroke:none;opacity:0.0001" />
+      </g>
+
+      <g id="flag"></g>
+
+      <g id="list-shapes" class="m-screen">
+        <g id="grid">
+          <rect x="36" y="438" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="231" y="438" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="426" y="438" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="621" y="438" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="816" y="438" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="36" y="238" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="231" y="238" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="426" y="238" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="621" y="238" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="816" y="238" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="36" y="38" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="231" y="38" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="426" y="38" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="621" y="38" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="816" y="38" width="180" height="180" rx="8" style="fill:#ccc" />
+          <rect x="32" y="434" width="180" height="180" rx="8" style="fill:#fffccc" />
+          <path d="M40,434a8,8,0,0,0-8,8v44H47a36.94,36.94,0,0,0,36.75-37V434Z" style="fill:#f6aa00" />
+          <rect x="227" y="434" width="180" height="180" rx="8" style="fill:#fffccc" />
+          <path d="M235,434a8,8,0,0,0-8,8v44h15a36.94,36.94,0,0,0,36.75-37V434Z" style="fill:#f6aa00" />
+          <rect x="422" y="434" width="180" height="180" rx="8" style="fill:#fffccc" />
+          <path d="M430,434a8,8,0,0,0-8,8v44h15a36.94,36.94,0,0,0,36.75-37V434Z" style="fill:#f6aa00" />
+          <rect x="617" y="434" width="180" height="180" rx="8" style="fill:#fff999" />
+          <path d="M625,434a8,8,0,0,0-8,8v44h15a36.94,36.94,0,0,0,36.75-37V434Z" style="fill:#f6aa00" />
+          <rect x="812" y="434" width="180" height="180" rx="8" style="fill:#fff999" />
+          <path d="M820,434a8,8,0,0,0-8,8v44h15a36.94,36.94,0,0,0,36.75-37V434Z" style="fill:#f6aa00" />
+          <rect x="32" y="234" width="180" height="180" rx="8" style="fill:#fffccc" />
+          <path d="M40,234a8,8,0,0,0-8,8v44H47a36.94,36.94,0,0,0,36.75-37V234Z" style="fill:#f6aa00" />
+          <rect x="227" y="234" width="180" height="180" rx="8" style="fill:#fffccc" />
+          <path d="M235,234a8,8,0,0,0-8,8v44h15a36.94,36.94,0,0,0,36.75-37V234Z" style="fill:#f6aa00" />
+          <rect x="422" y="234" width="180" height="180" rx="8" style="fill:#fffccc" />
+          <path d="M430,234a8,8,0,0,0-8,8v44h15a36.94,36.94,0,0,0,36.75-37V234Z" style="fill:#f6aa00" />
+          <rect x="617" y="234" width="180" height="180" rx="8" style="fill:#fffccc" />
+          <path d="M625,234a8,8,0,0,0-8,8v44h15a36.94,36.94,0,0,0,36.75-37V234Z" style="fill:#f6aa00" />
+          <rect x="812" y="234" width="180" height="180" rx="8" style="fill:#fffccc" />
+          <path d="M820,234a8,8,0,0,0-8,8v44h15a36.94,36.94,0,0,0,36.75-37V234Z" style="fill:#f6aa00" />
+          <rect x="32" y="34" width="180" height="180" rx="8" style="fill:#fffccc" />
+          <path d="M40,34a8,8,0,0,0-8,8V86H47A36.94,36.94,0,0,0,83.75,49V34Z" style="fill:#f6aa00" />
+          <rect x="227" y="34" width="180" height="180" rx="8" style="fill:#fffccc" />
+          <path d="M235,34a8,8,0,0,0-8,8V86h15a36.94,36.94,0,0,0,36.75-37V34Z" style="fill:#f6aa00" />
+          <rect x="422" y="34" width="180" height="180" rx="8" style="fill:#fffccc" />
+          <path d="M430,34a8,8,0,0,0-8,8V86h15a36.94,36.94,0,0,0,36.75-37V34Z" style="fill:#f6aa00" />
+          <rect x="617" y="34" width="180" height="180" rx="8" style="fill:#fffccc" />
+          <path d="M625,34a8,8,0,0,0-8,8V86h15a36.94,36.94,0,0,0,36.75-37V34Z" style="fill:#f6aa00" />
+          <rect x="812" y="34" width="180" height="180" rx="8" style="fill:#fffccc" />
+          <path d="M820,34a8,8,0,0,0-8,8V86h15a36.94,36.94,0,0,0,36.75-37V34Z" style="fill:#f6aa00" />
+        </g>
+        <g id="shape">
+          <path d="M156,473.69a45,45,0,0,0-45,45l45,67.5" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+          <polyline points="730.75 381.67 663.25 381.67 663.25 318.67 730.75 282.67" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+          <polyline points="731.68 78.78 680.98 166.61 731.68 195.89" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+          <path d="M539.75,186.83a49.5,49.5,0,1,1,0-99" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+          <polyline points="155.35 176.48 98.65 176.48 98.65 98.18 155.35 98.18" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+          <line x1="155.35" y1="204.83" x2="155.35" y2="69.83" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px" />
+          <polyline points="347.35 171.98 290.65 171.98 347.35 93.68" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+          <polyline points="923.35 285.01 866.65 285.01 923.35 379.51" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+          <polyline points="539.55 386.17 486.45 386.17 539.55 310.57" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+          <line x1="347.35" y1="204.83" x2="347.35" y2="69.83" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px" />
+          <line x1="539.75" y1="204.83" x2="539.75" y2="69.83" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px" />
+          <line x1="731.68" y1="204.83" x2="731.68" y2="69.83" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px" />
+          <polyline points="923.65 190.6 872.35 190.6 898.45 89.8 923.65 89.8" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+          <line x1="923.65" y1="204.83" x2="923.65" y2="69.83" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px" />
+          <polyline points="155.65 381.67 104.35 381.67 104.35 282.67 131.35 282.67 155.65 309.67" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+          <rect x="296.35" y="282.67" width="37.8" height="99" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+          <rect x="283.65" y="482.5" width="65.7" height="99" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+          <line x1="155.65" y1="399.67" x2="155.65" y2="264.67" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px" />
+          <line x1="347.65" y1="399.67" x2="347.65" y2="264.67" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px" />
+          <line x1="730.75" y1="399.67" x2="730.75" y2="264.67" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px" />
+          <line x1="923.35" y1="399.67" x2="923.35" y2="264.67" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px" />
+          <line x1="156" y1="599.5" x2="156" y2="464.5" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px" />
+          <line x1="361.3" y1="599.5" x2="271.7" y2="464.5" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px" />
+          <line x1="538.25" y1="599.5" x2="538.25" y2="464.5" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px" />
+          <polyline points="539.55 310.57 506.25 285.37 539.55 285.37" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+          <line x1="539.55" y1="399.67" x2="539.55" y2="264.67" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px" />
+          <circle cx="486.05" cy="532" r="24.3" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" />
+        </g>
+        <g id="text">
+          <text transform="translate(43.5 68.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">ア</text>
+          <text transform="translate(238.5 68.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">イ</text>
+          <text transform="translate(433.5 68.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">ウ</text>
+          <text transform="translate(628.5 68.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">エ</text>
+          <text transform="translate(823.5 68.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">オ</text>
+          <text transform="translate(238.5 268.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">キ</text>
+          <text transform="translate(433.5 268.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">ク</text>
+          <text transform="translate(628.5 268.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">ケ</text>
+          <text transform="translate(823.5 268.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">コ</text>
+          <text transform="translate(43.5 268.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">カ</text>
+          <text transform="translate(238.5 468.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">シ</text>
+          <text transform="translate(433.5 468.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">ス</text>
+          <text transform="translate(628.5 468.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">セ</text>
+          <text transform="translate(823.5 468.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">ソ</text>
+          <text transform="translate(43.5 468.88)" style="font-size:26px;fill:#fff;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">サ</text>
+          <text id="text-no-drawing-14" transform="translate(654.5 537)" style="font-size:22px;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">新しく作成</text>
+          <text id="text-no-drawing-15" transform="translate(849.5 537)" style="font-size:22px;font-family:HiraKakuPro-W6, HiraKakuPro W6-83pv-RKSJ-H">新しく作成</text>
+
+          <g id="thumbnail-drawing-14">
+            <path id="thumbnail-14-path" d="" fill="none" stroke="#03af7a" stroke-width="2px" stroke-linejoin="bevel"></path>
+            <line x1="730.5" y1="599.5" x2="730.5" y2="464.5" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px"></line>
+          </g>
+
+          <g id="thumbnail-drawing-15">
+            <path id="thumbnail-15-path" d="" fill="none" stroke="#03af7a" stroke-width="2px" stroke-linejoin="bevel"></path>
+            <line x1="923" y1="599.5" x2="923" y2="464.5" style="fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:2px"></line>
+          </g>
+        </g>
+
+        <g id="buttons" transform="translate(-5.5 0)">
+          <circle cx="778.5" cy="590" r="14" style="fill:#0b89dd" />
+          <path
+            d="M777.1,591.7l2.31-1.16,8.11-8.1-1.16-1.16-8.1,8.1Zm-1.72,4.1a4.41,4.41,0,0,0-2.39-2.39l1.79-4.94,2.32-1.4,6.94-7h-3.47l-7,7-3.47,11.57,11.58-3.47,6.94-6.95v-3.47l-6.94,7L780.32,594Z"
+            style="fill:#fafafa" />
+          <circle cx="970.5" cy="590" r="14" style="fill:#0b89dd" transform="translate(3 0)"/>
+          <path
+            d="M969.1,591.7l2.31-1.16,8.11-8.1-1.16-1.16-8.1,8.1Zm-1.72,4.1a4.41,4.41,0,0,0-2.39-2.39l1.79-4.94,2.32-1.4,6.94-7h-3.47l-7,7-3.47,11.57,11.58-3.47,6.94-6.95v-3.47l-6.94,7L972.32,594Z"
+            style="fill:#fafafa" transform="translate(3 0)"/>
+        </g>
+
+        <g id="wrapper" opacity="0.1">
+
+          <rect x="32" y="34" width="180" height="180" rx="8" style="fill:#fffccc" id="wrapper-shape-1" class="btn-pointer wrapper-shape-item" />
+          <rect x="227" y="34" width="180" height="180" rx="8" style="fill:#fffccc" id="wrapper-shape-2" class="btn-pointer wrapper-shape-item" />
+          <rect x="422" y="34" width="180" height="180" rx="8" style="fill:#fffccc" id="wrapper-shape-3" class="btn-pointer wrapper-shape-item" />
+          <rect x="617" y="34" width="180" height="180" rx="8" style="fill:#fffccc" id="wrapper-shape-4" class="btn-pointer wrapper-shape-item" />
+          <rect x="812" y="34" width="180" height="180" rx="8" style="fill:#fffccc" id="wrapper-shape-5" class="btn-pointer wrapper-shape-item" />
+
+          <rect x="32" y="234" width="180" height="180" rx="8" style="fill:#fffccc" id="wrapper-shape-6" class="btn-pointer wrapper-shape-item" />
+          <rect x="227" y="234" width="180" height="180" rx="8" style="fill:#fffccc" id="wrapper-shape-7" class="btn-pointer wrapper-shape-item" />
+          <rect x="422" y="234" width="180" height="180" rx="8" style="fill:#fffccc" id="wrapper-shape-8" class="btn-pointer wrapper-shape-item" />
+          <rect x="617" y="234" width="180" height="180" rx="8" style="fill:#fffccc" id="wrapper-shape-9" class="btn-pointer wrapper-shape-item" />
+          <rect x="812" y="234" width="180" height="180" rx="8" style="fill:#fffccc" id="wrapper-shape-10" class="btn-pointer wrapper-shape-item" />
+
+          <rect x="32" y="434" width="180" height="180" rx="8" style="fill:#fffccc" id="wrapper-shape-11" class="btn-pointer wrapper-shape-item" />
+          <rect x="227" y="434" width="180" height="180" rx="8" style="fill:#fffccc" id="wrapper-shape-12" class="btn-pointer wrapper-shape-item" />
+          <rect x="422" y="434" width="180" height="180" rx="8" style="fill:#fffccc" id="wrapper-shape-13" class="btn-pointer wrapper-shape-item" />
+          <rect x="617" y="434" width="180" height="180" rx="8" style="fill:#fff999" id="wrapper-button-1" class="btn-pointer wrapper-drawing-item" />
+          <rect x="812" y="434" width="180" height="180" rx="8" style="fill:#fff999" id="wrapper-button-2" class="btn-pointer wrapper-drawing-item" />
+        </g>
+
+      </g>
+
+      <g id="shape-detail" class="m-screen">
+        <g id="svg">
+        </g>
+
+        <rect class="draggable-zone" x="0" y="0" width="1024" height="500" fill="yellow" opacity="0.1"></rect>
+
+        <!-- <g id="show-list-shapes-group" class="btn-pointer">
+          <g id="btn-show-list-shapes-inactive" transform="matrix(1,0,0,1,59.876,34)">
+            <defs>
+              <style>
+                #btn-show-list-shapes-inactive .cls-1 {
+                  font-size: 18px;
+                  font-family: rounded-mplus-1p-medium, 'Rounded M+ 1p';
+                  font-weight: 500;
+                }
+          
+                #btn-show-list-shapes-inactive .cls-1, #btn-show-list-shapes-inactive .cls-2 {
+                  fill: #84919e;
+                }
+              </style>
+            </defs>
+            <rect x="0" y="0" width="130" height="30" fill="yellow" opacity="0.01"></rect>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="buttons">
+                <text class="cls-1" transform="translate(44.97 21.6)">一覧を表示</text>
+                <g id="最初に戻る">
+                  <path class="cls-2" d="M34.45,8.61,17.23,0,0,8.61l17.23,8.62ZM31,13.35l3.45,1.72L17.23,23.69,0,15.07l3.45-1.72,13.78,6.89Zm0,6.46,3.45,1.72L17.23,30.15,0,21.53l3.45-1.72L17.23,26.7Z"/>
+                </g>
+              </g>
+            </g>
+          </g>
+
+        </g> -->
+        <g transform="matrix(1,0,0,1,300,20)" class="btn-pointer">
+          <defs>
+            
+            <symbol id="toggle-center" data-name="toggle-center" viewBox="0 0 450 32">
+              <g id="buttons-2" data-name="buttons">
+                <g id="toggle-left">
+                  <g id="抽出トグル-invalid-2" data-name="抽出トグル-invalid">
+                    <g id="抽出トグル-a-invalid-2" data-name="抽出トグル-a-invalid">
+                      <rect class="cls-1" style="fill:#fff766;" width="450" height="32" rx="10"/>
+                      <!-- <rect class="cls-toggle cls_rect" id="cls-toggle_rect"  style="fill:#ffca80;mix-blend-mode:multiply;"  x="0" width="150" height="32"></rect> -->
+                      <path class="cls-toggle cls_rect" id="cls-toggle_rect" style="fill:#ffca80;mix-blend-mode:multiply;" d="M0,10A10,10,0,0,1,10,0H150V32H10A10,10,0,0,1,0,22Z"/>
+                      <path transform="matrix(1,0,0,1,300,0)" class="cls-toggle" id="cls-toggle_draw" style="fill:#ffca80;mix-blend-mode:multiply;" d="M150,22a10,10,0,0,1-10,10H0V0H140a10,10,0,0,1,10,10Z"/>
+                      <rect class="cls-toggle" id="cls-toggle_tri" style="fill:#ffca80;mix-blend-mode:multiply;" x="150" width="150" height="32"/>
+                      <!-- <rect class="cls-toggle" id="cls-toggle_draw" style="fill:#ffca80;mix-blend-mode:multiply;" x="300" width="150" height="32"/> -->
+                      
+                      <text class="cls-3" style="font-size:18px;font-family:rounded-mplus-1p-medium, 'Rounded M+ 1p';font-weight:500;" transform="translate(60.39 23.48)">
+                        <tspan class="cls-4" style="letter-spacing:0.25em;">長方</tspan>
+                        <tspan x="45" y="0">形</tspan>
+                      </text>
+                      <text class="cls-3" style="font-size:18px;font-family:rounded-mplus-1p-medium, 'Rounded M+ 1p';font-weight:500;" transform="translate(194.05 23.48)">直角三角形</text>
+                      <text class="cls-3" style="font-size:18px;font-family:rounded-mplus-1p-medium, 'Rounded M+ 1p';font-weight:500;" transform="translate(343.27 23.48)">新しく作成</text>
+                    </g>
+                    <line class="cls-5" style="fill:none;stroke:#fafafa;stroke-miterlimit:10;stroke-width:2px;" x1="300" x2="300" y2="32"/>
+                    <line class="cls-5" style="fill:none;stroke:#fafafa;stroke-miterlimit:10;stroke-width:2px;" x1="150" x2="150" y2="32"/>
+                  </g>
+                  <rect class="cls-6" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px;fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px;" x="30.28" y="7.16" width="12.8" height="17.68"/>
+                  <polygon class="cls-6" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px;" points="178.91 24.84 166.11 24.84 178.91 7.16 178.91 24.84"/>
+                  <circle class="cls-7" style="fill:#0b89dd;" cx="326.96" cy="17.17" r="11"/>
+                  <path class="cls-8" style="fill:#fafafa;" d="M325.86,18.5l1.82-.91,6.37-6.37-.91-.91-6.37,6.37Zm-1.34,3.23a3.48,3.48,0,0,0-1.89-1.88L324,16l1.82-1.11,5.46-5.45h-2.73l-5.46,5.45L320.4,24l9.1-2.73L335,15.77V13L329.5,18.5l-1.11,1.82Z"/>
+                  <rect class="toggle" id="toggle_rect"  style="fill:#ffca80;mix-blend-mode:multiply;opacity:0"  x="0" width="150" height="32"></rect>
+                  <rect class="toggle" id="toggle_tri"  style="fill:#ffca80;mix-blend-mode:multiply;opacity:0"  x="150" width="150" height="32"></rect>
+                  <rect class="toggle" id="toggle_draw"  style="fill:#ffca80;mix-blend-mode:multiply;opacity:0"  x="300" width="150" height="32"></rect>
+
+                  
+                </g>
+              </g>
+            </symbol>
+          </defs>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="buttons">
+              <use width="450" height="32" xlink:href="#toggle-center"/>
+            </g>
+          </g>
+         style=""</g>
+        <!-- <g id="btn-rect-group" class="btn-pointer">
+          <g id="btn-rect-inactive" transform="matrix(1,0,0,1,300,10)" >
+            <defs>
+              <symbol id="btn-rectangle-valid" data-name="btn-rectangle-valid" viewBox="0 0 150 48">
+                <rect class="cls-1" style="fill:#e0e0e0"  y="4" width="150" height="44" rx="14"/>
+                <rect class="cls-2" style="fill:#fff766" width="150" height="44" rx="14"/>
+                <text class="cls-3" style="font-size:18px;font-family:rounded-mplus-1p-medium, 'Rounded M+ 1p';font-weight:500;" transform="translate(60.39 29.48)">
+                  <tspan class="cls-4" style="letter-spacing:0.25em">長方</tspan>
+                  <tspan x="45" y="0">形</tspan>
+                </text>
+                <rect class="cls-5" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" x="28.68" y="10.95" width="16" height="22.1"/>
+              </symbol>
+            </defs>
+            <g id="Layer_2" data-name="Layer 2"><g id="buttons"><use width="150" height="48"  xlink:href="#btn-rectangle-valid"/></g></g>
+          </g>
+          
+          <g id="btn-rect-active" transform="matrix(1,0,0,1,300,10)" >
+            <defs>
+                <symbol id="btn-rectangle-push" data-name="btn-rectangle-push" viewBox="0 0 150 48">
+                  <g id="btn-rectangle-valid">
+                    <g id="btn-rectangle-valid">
+                      <rect class="cls-1" style="fill:#e0e0e0;" y="4" width="150" height="44" rx="14"/>
+                      <rect class="cls-2" style="fill:#fff766;" width="150" height="44" rx="14"/>
+                      <g class="cls-3" style="mix-blend-mode:multiply;">
+                        <rect class="cls-4" style="fill:#ffca80;" width="150" height="44" rx="14"/>
+                      </g>
+                    </g>
+                    <text class="cls-5" style="font-size:18px;font-family:rounded-mplus-1p-medium, 'Rounded M+ 1p';font-weight:500;" transform="translate(60.39 29.48)">
+                      <tspan class="cls-6" style="letter-spacing:0.25em;">長方</tspan>
+                      <tspan x="45" y="0">形</tspan>
+                    </text>
+                    <rect class="cls-7" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px;" x="28.68" y="10.95" width="16" height="22.1"/>
+
+                  </g>
+                </symbol>
+            </defs>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="buttons">
+                  <use width="150" height="48" xlink:href="#btn-rectangle-push"/>
+                </g>
+              </g>
+          </g>
+
+        </g>
+        <g id="btn-tri-group" class="btn-pointer">
+          
+          <g id="btn-tri-inactive" transform="matrix(1,0,0,1,460,10)">
+            <defs>
+              <symbol id="btn-triangle-valid" data-name="btn-triangle-valid" viewBox="0 0 150 48">
+                <g id="btn-rectangle-valid">
+                  <rect class="cls-1" style="fill:#e0e0e0" y="4" width="150" height="44" rx="14"/>
+                  <rect class="cls-2" style="fill:#fff766" width="150" height="44" rx="14"/>
+                </g>
+                <text class="cls-3" style="font-size:18px;font-family:rounded-mplus-1p-medium, "Rounded M+ 1p";font-weight:500" transform="translate(60.39 29.48)">
+                  <tspan class="cls-4" style="letter-spacing:0.25em">三角</tspan>
+                  <tspan x="45" y="0">形</tspan>
+                </text>
+                <polygon class="cls-5" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px" points="44.68 33.05 28.68 33.05 44.68 10.95 44.68 33.05"/>
+              </symbol>
+            </defs>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="buttons">
+                <use width="150" height="48" xlink:href="#btn-triangle-valid"/>
+              </g>
+            </g>
+          </g>
+          <g id="btn-tri-active" transform="matrix(1,0,0,1,460,10)" >
+            <defs>
+                <symbol id="btn-triangle-push" data-name="btn-triangle-push" viewBox="0 0 150 48">
+                  <g id="btn-triangle-valid">
+                    <g id="btn-rectangle-valid">
+                      <rect class="cls-1" style="fill:#e0e0e0;" y="4" width="150" height="44" rx="14"/>
+                      <rect class="cls-2" style="fill:#fff766;" width="150" height="44" rx="14"/>
+                      <g class="cls-3" style="mix-blend-mode:multiply;">
+                        <rect class="cls-4" style="fill:#ffca80;" width="150" height="44" rx="14"/>
+                      </g>
+                    </g>
+                    <text class="cls-5" style="font-size:18px;font-family:rounded-mplus-1p-medium, 'Rounded M+ 1p';font-weight:500;" transform="translate(60.39 29.48)">
+                      <tspan class="cls-6" style="letter-spacing:0.25em;">三角</tspan>
+                      <tspan x="45" y="0">形</tspan>
+                    </text>
+                    <polygon class="cls-7" style="fill:#bfe4ff;stroke:#005aff;stroke-linejoin:round;stroke-width:2px;" points="44.68 33.05 28.68 33.05 44.68 10.95 44.68 33.05"/>
+                  </g>
+                </symbol>
+            </defs>
+              <g id="Layer_2" data-name="Layer 2">
+                <g id="buttons">
+                  <use width="150" height="48" xlink:href="#btn-triangle-push"/>
+                </g>
+              </g>
+          </g>
+        </g> -->
+        <g id="btn-play-group" class="btn-pointer">
+          <g id="btn-play-inactive" transform="matrix(1,0,0,1,310,497)">
+            <defs>
+              <clipPath id="clip-path-002" transform="translate(0 0)">
+                <rect width="146" height="48" style="fill:none" />
+              </clipPath>
+            </defs>
+            <g style="clip-path:url(#clip-path-002)">
+              <g style="clip-path:url(#clip-path-002)">
+                <path d="M132,48H14A14,14,0,0,1,0,34V18A14,14,0,0,1,14,4H132a14,14,0,0,1,14,14V34a14,14,0,0,1-14,14" transform="translate(0 0)" style="fill:#ccc" />
+                <rect x="1.5" y="1.5" width="143" height="41" rx="12.5" style="fill:#fafafa" />
+                <path
+                  d="M132,3a11,11,0,0,1,11,11V30a11,11,0,0,1-11,11H14A11,11,0,0,1,3,30V14A11,11,0,0,1,14,3H132m0-3H14A14,14,0,0,0,0,14V30A14,14,0,0,0,14,44H132a14,14,0,0,0,14-14V14A14,14,0,0,0,132,0Z"
+                  transform="translate(0 0)" style="fill:#0b89dd" />
+              </g>
+              <g style="clip-path:url(#clip-path-002)">
+                <polygon points="19.5 29 19.5 15 34.5 22 19.5 29" style="fill:#0b89dd" />
+              </g>
+              <text transform="translate(58 28.98)" style="font-size:18px;fill:#0b89dd;font-family:rounded-l-mplus-1c-medium,'Rounded-L M+ 1c';font-weight:500">
+                <tspan style="letter-spacing:0.22200520833333334em">開</tspan>
+                <tspan x="22" y="0">始</tspan>
+              </text>
+            </g>
+          </g>
+
+          <g id="btn-play-active" transform="matrix(1,0,0,1,310,497)">
+            <defs>
+              <clipPath id="clip-path-003" transform="translate(0 -4)">
+                <rect width="146" height="48" style="fill:none" />
+              </clipPath>
+            </defs>
+            <g style="clip-path:url(#clip-path-003)">
+              <g style="clip-path:url(#clip-path-003)">
+                <path d="M132,4H14A14,14,0,0,0,0,18V34A14,14,0,0,0,14,48H132a14,14,0,0,0,14-14V18A14,14,0,0,0,132,4" transform="translate(0 -4)" style="fill:#0b89dd" />
+              </g>
+              <g style="clip-path:url(#clip-path-003)">
+                <polygon points="19.5 29 19.5 15 34.5 22 19.5 29" style="fill:#fafafa" />
+              </g>
+              <text transform="translate(58 28.98)" style="font-size:18px;fill:#fafafa;font-family:rounded-l-mplus-1c-medium,'Rounded-L M+ 1c';font-weight:500">
+                <tspan style="letter-spacing:0.22200520833333334em">開</tspan>
+                <tspan x="22" y="0">始</tspan>
+              </text>
+            </g>
+          </g>
+
+          <g id="btn-play-disabled" transform="matrix(1,0,0,1,310,497)">
+            <defs>
+              <clipPath id="clip-path-004" transform="translate(0 0)">
+                <rect width="146" height="48" style="fill:none" />
+              </clipPath>
+            </defs>
+
+            <g style="clip-path:url(#clip-path-004)">
+              <g style="clip-path:url(#clip-path-004)">
+                <path d="M132,48H14A14,14,0,0,1,0,34V18A14,14,0,0,1,14,4H132a14,14,0,0,1,14,14V34a14,14,0,0,1-14,14" transform="translate(0 0)" style="fill:#ccc" />
+                <rect x="1.5" y="1.5" width="143" height="41" rx="12.5" style="fill:#f2f2f2" />
+                <path
+                  d="M132,3a11,11,0,0,1,11,11V30a11,11,0,0,1-11,11H14A11,11,0,0,1,3,30V14A11,11,0,0,1,14,3H132m0-3H14A14,14,0,0,0,0,14V30A14,14,0,0,0,14,44H132a14,14,0,0,0,14-14V14A14,14,0,0,0,132,0Z"
+                  transform="translate(0 0)" style="fill:#b3b3b3" />
+              </g>
+              <g style="clip-path:url(#clip-path-004)">
+                <polygon points="19.5 29 19.5 15 34.5 22 19.5 29" style="fill:#b3b3b3" />
+              </g>
+              <text transform="translate(58 28.98)" style="font-size:18px;fill:#b3b3b3;font-family:rounded-l-mplus-1c-medium,'Rounded-L M+ 1c';font-weight:500">
+                <tspan style="letter-spacing:0.22200520833333334em">開</tspan>
+                <tspan x="22" y="0">始</tspan>
+              </text>
+            </g>
+          </g>
+        </g>
+
+        <g id="btn-pause-group" class="btn-pointer">
+          <g id="btn-pause-active" transform="matrix(1,0,0,1,310,497)">
+            <defs>
+              <clipPath id="clip-path-active" transform="translate(0 -4)">
+                <rect id="SVGID" width="146" height="48" style="fill:none" />
+              </clipPath>
+            </defs>
+            <g style="clip-path:url(#clip-path-active)">
+              <g style="clip-path:url(#clip-path-active)">
+                <path d="M132,4H14A14,14,0,0,0,0,18V34A14,14,0,0,0,14,48H132a14,14,0,0,0,14-14V18A14,14,0,0,0,132,4" transform="translate(0 -4)" style="fill:#0b89dd" />
+              </g>
+              <g style="clip-path:url(#clip-path-active)">
+                <rect x="19.5" y="15.5" width="5" height="13" style="fill:#fafafa" />
+                <rect x="27.5" y="15.5" width="5" height="13" style="fill:#fafafa" />
+              </g>
+              <text transform="translate(39.5 29.48)" style="font-size:18px;fill:#fafafa;font-family:rounded-l-mplus-1c-medium,'Rounded-L M+ 1c';font-weight:500">
+                <tspan style="letter-spacing:0.0929904513888889em">一時停</tspan>
+                <tspan x="59.02" y="0">止</tspan>
+              </text>
+            </g>
+          </g>
+
+          <g id="btn-pause-inactive" transform="matrix(1,0,0,1,310,497)">
+            <defs>
+              <clipPath id="clip-path-005" transform="translate(0 0)">
+                <rect id="SVGID" width="146" height="48" style="fill:none" />
+              </clipPath>
+            </defs>
+            <g style="clip-path:url(#clip-path-005)">
+              <g style="clip-path:url(#clip-path-005)">
+                <path d="M132,48H14A14,14,0,0,1,0,34V18A14,14,0,0,1,14,4H132a14,14,0,0,1,14,14V34a14,14,0,0,1-14,14" transform="translate(0 0)" style="fill:#ccc" />
+                <rect x="1.5" y="1.5" width="143" height="41" rx="12.5" style="fill:#fafafa" />
+                <path
+                  d="M132,3a11,11,0,0,1,11,11V30a11,11,0,0,1-11,11H14A11,11,0,0,1,3,30V14A11,11,0,0,1,14,3H132m0-3H14A14,14,0,0,0,0,14V30A14,14,0,0,0,14,44H132a14,14,0,0,0,14-14V14A14,14,0,0,0,132,0Z"
+                  transform="translate(0 0)" style="fill:#0b89dd" />
+              </g>
+              <g style="clip-path:url(#clip-path-005)">
+                <rect x="19.5" y="15.5" width="5" height="13" style="fill:#0b89dd" />
+                <rect x="27.5" y="15.5" width="5" height="13" style="fill:#0b89dd" />
+              </g>
+              <text transform="translate(39.5 29.48)" style="font-size:18px;fill:#0b89dd;font-family:rounded-l-mplus-1c-medium,'Rounded-L M+ 1c';font-weight:500">
+                <tspan style="letter-spacing:0.0929904513888889em">一時停</tspan>
+                <tspan x="59.02" y="0">止</tspan>
+              </text>
+            </g>
+          </g>
+        </g>
+
+        <g id="btn-reload-group">
+          <g id="btn-reload-inactive" transform="matrix(1,0,0,1,310,571)" class="btn-pointer">
+            <defs>
+              <clipPath id="clip-path-006" transform="translate(0 0)">
+                <rect width="146" height="48" style="fill:none" />
+              </clipPath>
+            </defs>
+            <g style="clip-path:url(#clip-path-006)">
+              <g style="clip-path:url(#clip-path-006)">
+                <path d="M132,48H14A14,14,0,0,1,0,34V18A14,14,0,0,1,14,4H132a14,14,0,0,1,14,14V34a14,14,0,0,1-14,14" transform="translate(0 0)" style="fill:#ccc" />
+                <rect x="1.5" y="1.5" width="143" height="41" rx="12.5" style="fill:#fafafa" />
+                <path
+                  d="M132,3a11,11,0,0,1,11,11V30a11,11,0,0,1-11,11H14A11,11,0,0,1,3,30V14A11,11,0,0,1,14,3H132m0-3H14A14,14,0,0,0,0,14V30A14,14,0,0,0,14,44H132a14,14,0,0,0,14-14V14A14,14,0,0,0,132,0Z"
+                  transform="translate(0 0)" style="fill:#0b89dd" />
+              </g>
+              <g style="clip-path:url(#clip-path-006)">
+                <path d="M26.1,17.59A6.5,6.5,0,1,1,18.5,24" transform="translate(0 0)" style="fill:none;stroke:#0b89dd;stroke-miterlimit:10;stroke-width:3px" />
+                <polygon points="26.68 22.55 19.3 16.44 28.28 13.11 26.68 22.55" style="fill:#0b89dd" />
+              </g>
+              <text transform="translate(39.5 28.98)" style="font-size:18px;fill:#0b89dd;font-family:rounded-l-mplus-1c-medium,'Rounded-L M+ 1c';font-weight:500">最初に戻る</text>
+            </g>
+          </g>
+
+          <g id="btn-reload-active" transform="matrix(1,0,0,1,310,571)" class="btn-pointer">
+            <defs>
+              <clipPath id="clip-path-007" transform="translate(0 -4)">
+                <rect width="146" height="48" style="fill:none" />
+              </clipPath>
+            </defs>
+            <g style="clip-path:url(#clip-path-007)">
+              <g style="clip-path:url(#clip-path-007)">
+                <path d="M132,48H14A14,14,0,0,1,0,34V18A14,14,0,0,1,14,4H132a14,14,0,0,1,14,14V34a14,14,0,0,1-14,14" transform="translate(0 -4)" style="fill:#ccc" />
+                <path d="M132,4H14A14,14,0,0,0,0,18V34A14,14,0,0,0,14,48H132a14,14,0,0,0,14-14V18A14,14,0,0,0,132,4" transform="translate(0 -4)" style="fill:#0b89dd" />
+              </g>
+              <g style="clip-path:url(#clip-path-007)">
+                <path d="M26.1,21.59A6.5,6.5,0,1,1,18.5,28" transform="translate(0 -4)" style="fill:none;stroke:#fafafa;stroke-miterlimit:10;stroke-width:3px" />
+                <polygon points="26.68 22.55 19.3 16.44 28.28 13.11 26.68 22.55" style="fill:#fafafa" />
+              </g>
+              <text transform="translate(39.5 28.98)" style="font-size:18px;fill:#fafafa;font-family:rounded-l-mplus-1c-medium,'Rounded-L M+ 1c';font-weight:500">最初に戻る</text>
+            </g>
+          </g>
+
+          <g id="btn-reload-disabled" transform="matrix(1,0,0,1,310,571)" class="btn-disabled">
+            <defs>
+              <clipPath id="clip-path-008" transform="translate(0 0)">
+                <rect width="146" height="48" style="fill:none" />
+              </clipPath>
+            </defs>
+            <g style="clip-path:url(#clip-path-008)">
+              <g style="clip-path:url(#clip-path-008)">
+                <path d="M132,48H14A14,14,0,0,1,0,34V18A14,14,0,0,1,14,4H132a14,14,0,0,1,14,14V34a14,14,0,0,1-14,14" transform="translate(0 0)" style="fill:#ccc" />
+                <rect x="1.5" y="1.5" width="143" height="41" rx="12.5" style="fill:#f2f2f2" />
+                <path
+                  d="M132,3a11,11,0,0,1,11,11V30a11,11,0,0,1-11,11H14A11,11,0,0,1,3,30V14A11,11,0,0,1,14,3H132m0-3H14A14,14,0,0,0,0,14V30A14,14,0,0,0,14,44H132a14,14,0,0,0,14-14V14A14,14,0,0,0,132,0Z"
+                  transform="translate(0 0)" style="fill:#b3b3b3" />
+              </g>
+              <g style="clip-path:url(#clip-path-008)">
+                <path d="M26.1,17.59A6.5,6.5,0,1,1,18.5,24" transform="translate(0 0)" style="fill:none;stroke:#b3b3b3;stroke-miterlimit:10;stroke-width:3px" />
+                <polygon points="26.68 22.55 19.31 16.44 28.28 13.11 26.68 22.55" style="fill:#b3b3b3" />
+              </g>
+              <text transform="translate(39.5 28.98)" style="font-size:18px;fill:#b3b3b3;font-family:rounded-l-mplus-1c-medium,'Rounded-L M+ 1c';font-weight:500">最初に戻る</text>
+            </g>
+          </g>
+        </g>
+
+        <g id="btn-radio-1-group" class="radio-group">
+          <g id="btn-radio-1-false" transform="matrix(1,0,0,1,140,495)">
+            <path d="M13.5,3A10.5,10.5,0,1,1,3,13.5,10.51,10.51,0,0,1,13.5,3m0-3A13.5,13.5,0,1,0,27,13.5,13.49,13.49,0,0,0,13.5,0Z" style="fill: #0b89dd" />
+            <rect width="120" height="27" style="fill: none" />
+            <text transform="translate(39 20.48)" style="font-size: 18px;font-family: rounded-l-mplus-1c-medium, 'Rounded-L M+ 1c';font-weight: 500">四方向</text>
+          </g>
+          <g id="btn-radio-1-true" transform="matrix(1,0,0,1,140,493)">
+            <path d="M13.5,5A10.5,10.5,0,1,1,3,15.5,10.51,10.51,0,0,1,13.5,5m0-3A13.5,13.5,0,1,0,27,15.5,13.49,13.49,0,0,0,13.5,2Z" style="fill: #0b89dd" />
+            <circle cx="13.5" cy="15.5" r="5.63" style="fill: #0b89dd" />
+            <polygon points="120 27 0 29 0 2 120 0 120 27" style="fill: none" />
+            <text transform="translate(39 22.48)" style="font-size: 18px;font-family: rounded-l-mplus-1c-medium, 'Rounded-L M+ 1c';font-weight: 500">四方向</text>
+          </g>
+          <rect x=0 y=0 width="100" height="27" fill="yellow" opacity="0.01" transform="matrix(1,0,0,1,140,495)" id="radio-rect-1"></rect>
+        </g>
+
+        <g id="btn-radio-2-group" class="radio-group">
+          <g id="btn-radio-2-false" transform="matrix(1,0,0,1,140,542)">
+            <path d="M13.5,3A10.5,10.5,0,1,1,3,13.5,10.51,10.51,0,0,1,13.5,3m0-3A13.5,13.5,0,1,0,27,13.5,13.49,13.49,0,0,0,13.5,0Z" style="fill: #0b89dd" />
+            <rect width="120" height="27" style="fill: none" />
+            <text transform="translate(39 20.48)" style="font-size: 18px;font-family: rounded-l-mplus-1c-medium, 'Rounded-L M+ 1c';font-weight: 500">ゆっくり</text>
+          </g>
+          <g id="btn-radio-2-true" transform="matrix(1,0,0,1,140,540)">
+            <path d="M13.5,5A10.5,10.5,0,1,1,3,15.5,10.51,10.51,0,0,1,13.5,5m0-3A13.5,13.5,0,1,0,27,15.5,13.49,13.49,0,0,0,13.5,2Z" style="fill: #0b89dd" />
+            <circle cx="13.5" cy="15.5" r="5.63" style="fill: #0b89dd" />
+            <polygon points="120 27 0 29 0 2 120 0 120 27" style="fill: none" />
+            <text transform="translate(39 22.48)" style="font-size: 18px;font-family: rounded-l-mplus-1c-medium, 'Rounded-L M+ 1c';font-weight: 500">ゆっくり</text>
+          </g>
+          <rect x=0 y=0 width="120" height="27" fill="yellow" opacity="0.01" transform="matrix(1,0,0,1,140,542)" id="radio-rect-2"></rect>
+        </g>
+
+        <g id="btn-radio-3-group" class="radio-group">
+          <g id="btn-radio-3-false" transform="matrix(1,0,0,1,140,587)">
+            <path d="M13.5,3A10.5,10.5,0,1,1,3,13.5,10.51,10.51,0,0,1,13.5,3m0-3A13.5,13.5,0,1,0,27,13.5,13.49,13.49,0,0,0,13.5,0Z" style="fill: #0b89dd" />
+            <rect width="120" height="27" style="fill: none" />
+            <text transform="translate(39 20.48)" style="font-size: 18px;font-family: rounded-l-mplus-1c-medium, 'Rounded-L M+ 1c';font-weight: 500">高速</text>
+          </g>
+          <g id="btn-radio-3-true" transform="matrix(1,0,0,1,140,585)">
+            <path d="M13.5,5A10.5,10.5,0,1,1,3,15.5,10.51,10.51,0,0,1,13.5,5m0-3A13.5,13.5,0,1,0,27,15.5,13.49,13.49,0,0,0,13.5,2Z" style="fill: #0b89dd" />
+            <circle cx="13.5" cy="15.5" r="5.63" style="fill: #0b89dd" />
+            <polygon points="120 27 0 29 0 2 120 0 120 27" style="fill: none" />
+            <text transform="translate(39 22.48)" style="font-size: 18px;font-family: rounded-l-mplus-1c-medium, 'Rounded-L M+ 1c';font-weight: 500">高速</text>
+          </g>
+          <rect x=0 y=0 width="100" height="27" fill="yellow" opacity="0.01" transform="matrix(1,0,0,1,140,587)" id="radio-rect-3"></rect>
+        </g>
+
+        <g id="checkbox-show3d-group" class="checkbox-group">
+          <rect width="100" height="27" style="fill:none" />
+
+          <g id="checkbox-show3d-true" transform="matrix(1,0,0,1,700,535)">
+            <path d="M22,3.26a2,2,0,0,1,2,2V21.74a2,2,0,0,1-2,2H5a2,2,0,0,1-2-2V5.26a2,2,0,0,1,2-2H22m0-3H5a5,5,0,0,0-5,5V21.74a5,5,0,0,0,5,5H22a5,5,0,0,0,5-5V5.26a5,5,0,0,0-5-5Z"
+              style="fill:#0b89dd" />
+            <polyline points="6.45 9.6 11.28 17.6 21.09 7.15" style="fill:none;stroke:#0b89dd;stroke-miterlimit:10;stroke-width:4px" />
+            <text transform="translate(40 20.48)" style="font-size:18px;font-family:rounded-mplus-1p-medium, 'Rounded M+ 1p';font-weight:500">立体を表示</text>
+          </g>
+
+          <g id="checkbox-show3d-false" transform="matrix(1,0,0,1,700,535)">
+            <rect width="100" height="27" style="fill:none" />
+            <text transform="translate(40 20.48)" style="font-size:18px;font-family:rounded-mplus-1p-medium, 'Rounded M+ 1p';font-weight:500">立体を表示</text>
+            <path d="M22,3.26a2,2,0,0,1,2,2V21.74a2,2,0,0,1-2,2H5a2,2,0,0,1-2-2V5.26a2,2,0,0,1,2-2H22m0-3H5a5,5,0,0,0-5,5V21.74a5,5,0,0,0,5,5H22a5,5,0,0,0,5-5V5.26a5,5,0,0,0-5-5Z"
+              style="fill:#0b89dd" />
+          </g>
+
+          <rect class="rect-button-ingore-touch" x="0" y="0" width="150" height="27" fill="yellow" opacity="0.01" transform="matrix(1,0,0,1,700,535)" id="checkbox-1"></rect>
+        </g>
+
+        <g id="btn-back-to-draw-group" class="btn-pointer">
+          <g id="btn-back-to-draw-inactive" transform="matrix(1, 0, 0, 1, 340, 80)">
+            <defs>
+              <style>
+                #btn-back-to-draw-inactive .cls-1, #btn-back-to-draw-inactive .cls-2 {
+                  fill: #84919e;
+                }
+          
+                #btn-back-to-draw-inactive .cls-2 {
+                  font-size: 18px;
+                  font-family: rounded-l-mplus-1c-medium, rounded l-mplus-1c-medium;
+                  font-weight: 500;
+                }
+              </style>
+            </defs>
+            <g id="Layer_2" data-name="Layer 2">
+              <rect x="0" y="0" width="75" height="25" fill="yellow" opacity="0.01"></rect>
+              <g id="buttons">
+                <g>
+                  <polygon class="cls-1" points="8.93 14.88 11.91 13.39 22.33 2.98 20.84 1.49 10.42 11.91 8.93 14.88"/>
+                  <path class="cls-1" d="M0,23.81l14.88-4.46,8.93-8.93V6l-8.93,8.93-1.81,3-6.34,2.3a5.69,5.69,0,0,0-3.08-3.07L6,10.74l3-1.81L17.86,0H13.4L4.47,8.93,0,23.81"/>
+                </g>
+                <text class="cls-2" transform="translate(37.7 18.32)">編集</text>
+              </g>
+            </g>
+          </g>
+          <!-- <g id="btn-back-to-draw-inactive" transform="matrix(1, 0, 0, 1, 462, 436)">
+            <defs>
+              <style>
+                #btn-back-to-draw-inactive .cls-1 {
+                  fill: #ccc;
+                }
+          
+                #btn-back-to-draw-inactive .cls-2 {
+                  fill: #fafafa;
+                }
+          
+                #btn-back-to-draw-inactive .cls-3, #btn-back-to-draw-inactive .cls-4 {
+                  fill: #0b89dd;
+                }
+          
+                #btn-back-to-draw-inactive .cls-4 {
+                  font-size: 18px;
+                  font-family: rounded-l-mplus-1c-medium, rounded l-mplus-1c-medium;
+                  font-weight: 500;
+                }
+              </style>
+            </defs>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="buttons">
+                <path class="cls-1" d="M100,24A20.06,20.06,0,0,1,80,44H20A20.06,20.06,0,0,1,0,24H0A20.06,20.06,0,0,1,20,4H80a20.06,20.06,0,0,1,20,20Z"/>
+                <g>
+                  <path class="cls-2" d="M20,38.5a18.5,18.5,0,0,1,0-37H80a18.5,18.5,0,0,1,0,37Z"/>
+                  <path class="cls-3" d="M80,3a17,17,0,0,1,0,34H20A17,17,0,0,1,20,3H80m0-3H20a20,20,0,0,0,0,40H80A20,20,0,0,0,80,0Z"/>
+                </g>
+                <g>
+                  <polygon class="cls-3" points="23.34 23.05 26.32 21.57 36.74 11.15 35.25 9.66 24.83 20.08 23.34 23.05"/>
+                  <path class="cls-3" d="M14.41,32,29.3,27.52l8.93-8.93V14.12L29.3,23.06l-1.81,3-6.35,2.31a5.64,5.64,0,0,0-3.08-3.08l2.31-6.35,3-1.81,8.93-8.93H27.81L18.88,17.1,14.41,32"/>
+                </g>
+                <text class="cls-4" transform="translate(46.17 26.15)">編集</text>
+              </g>
+            </g>
+          </g>
+          <g id="btn-back-to-draw-active" transform="matrix(1, 0, 0, 1, 462, 436)">
+            <defs>
+              <style>
+                #btn-back-to-draw-active .cls-1 {
+                  fill: none;
+                }
+          
+                #btn-back-to-draw-active .cls-2 {
+                  clip-path: url(#clip-path-200);
+                }
+          
+                #btn-back-to-draw-active .cls-3 {
+                  fill: #0b89dd;
+                }
+          
+                #btn-back-to-draw-active .cls-4, #btn-back-to-draw-active .cls-5 {
+                  fill: #fff;
+                }
+          
+                #btn-back-to-draw-active .cls-5 {
+                  font-size: 18px;
+                  font-family: rounded-l-mplus-1c-medium, rounded l-mplus-1c-medium;
+                  font-weight: 500;
+                }
+              </style>
+              <clipPath id="clip-path-200" transform="translate(0 -4)">
+                <rect class="cls-1" width="100" height="44"/>
+              </clipPath>
+            </defs>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="buttons">
+                <g class="cls-2">
+                  <path class="cls-3" d="M100,24A20.06,20.06,0,0,1,80,44H20A20.06,20.06,0,0,1,0,24H0A20.06,20.06,0,0,1,20,4H80a20.06,20.06,0,0,1,20,20Z" transform="translate(0 -4)"/>
+                  <g>
+                    <polygon class="cls-4" points="23.34 23.05 26.32 21.57 36.74 11.15 35.25 9.66 24.83 20.08 23.34 23.05"/>
+                    <path class="cls-4" d="M14.41,36,29.3,31.52l8.93-8.93V18.12L29.3,27.06l-1.81,3-6.35,2.31a5.64,5.64,0,0,0-3.08-3.08l2.31-6.35,3-1.81,8.93-8.93H27.81L18.88,21.1,14.41,36" transform="translate(0 -4)"/>
+                  </g>
+                  <text class="cls-5" transform="translate(46.17 26.15)">編集</text>
+                </g>
+              </g>
+            </g>
+          </g> -->
+        </g>
+      </g>
+
+      <g id="drawing-board" class="m-screen">
+
+        <g id="show-list-shapes2-group" class="btn-pointer">
+          <!-- <g id="btn-show-list-shapes2-inactive" transform="matrix(1,0,0,1,59.876,34)">
+            <defs>
+              <style>
+                #btn-show-list-shapes2-inactive .cls-1 {
+                  font-size: 18px;
+                  font-family: rounded-mplus-1p-medium, 'Rounded M+ 1p';
+                  font-weight: 500;
+                }
+          
+                #btn-show-list-shapes2-inactive .cls-1, #btn-show-list-shapes2-inactive .cls-2 {
+                  fill: #84919e;
+                }
+              </style>
+            </defs>
+            <rect x="0" y="0" width="130" height="30" fill="yellow" opacity="0.01"></rect>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="buttons">
+                <text class="cls-1" transform="translate(44.97 21.6)">一覧を表示</text>
+                <g id="最初に戻る">
+                  <path class="cls-2" d="M34.45,8.61,17.23,0,0,8.61l17.23,8.62ZM31,13.35l3.45,1.72L17.23,23.69,0,15.07l3.45-1.72,13.78,6.89Zm0,6.46,3.45,1.72L17.23,30.15,0,21.53l3.45-1.72L17.23,26.7Z"/>
+                </g>
+              </g>
+            </g>
+          </g> -->
+          <!-- <g id="btn-show-list-shapes2-inactive" transform="matrix(1,0,0,1,59.876,34)">
+            <defs>
+              <clipPath id="clip-path-009" transform="translate(0 0)">
+                <rect width="146" height="48" style="fill:none" />
+              </clipPath>
+            </defs>
+            <g style="clip-path:url(#clip-path-009)">
+              <g style="clip-path:url(#clip-path-009)">
+                <path d="M132,48H14A14,14,0,0,1,0,34V18A14,14,0,0,1,14,4H132a14,14,0,0,1,14,14V34a14,14,0,0,1-14,14" transform="translate(0 0)" style="fill:#ccc" />
+                <rect x="1.5" y="1.5" width="143" height="41" rx="12.5" style="fill:#fafafa" />
+                <path
+                  d="M132,3a11,11,0,0,1,11,11V30a11,11,0,0,1-11,11H14A11,11,0,0,1,3,30V14A11,11,0,0,1,14,3H132m0-3H14A14,14,0,0,0,0,14V30A14,14,0,0,0,14,44H132a14,14,0,0,0,14-14V14A14,14,0,0,0,132,0Z"
+                  transform="translate(0 0)" style="fill:#0b89dd" />
+                <path d="M32.8,19,24,14.57,15.16,19,24,23.39ZM31,21.41l1.77.88L24,26.7l-8.82-4.41,1.76-.88L24,24.93Zm0,3.3,1.77.89L24,30,15.16,25.6l1.76-.89L24,28.24Z" transform="translate(0 0)"
+                  style="fill:#0b89dd" />
+              </g>
+              <text transform="translate(39.5 28.98)" style="font-size:18px;fill:#0b89dd;font-family:rounded-l-mplus-1c-medium,'Rounded-L M+ 1c';font-weight:500">一覧を表示</text>
+            </g>
+          </g>
+
+          <g id="btn-show-list-shapes2-active" transform="matrix(1,0,0,1,59.876,34)">
+            <defs>
+              <clipPath id="clip-path-010" transform="translate(0 -4)">
+                <rect width="146" height="48" style="fill:none" />
+              </clipPath>
+            </defs>
+            <g style="clip-path:url(#clip-path-010)">
+              <g style="clip-path:url(#clip-path-010)">
+                <path d="M132,48H14A14,14,0,0,1,0,34V18A14,14,0,0,1,14,4H132a14,14,0,0,1,14,14V34a14,14,0,0,1-14,14" transform="translate(0 -4)" style="fill:#ccc" />
+                <path d="M132,4H14A14,14,0,0,0,0,18V34A14,14,0,0,0,14,48H132a14,14,0,0,0,14-14V18A14,14,0,0,0,132,4" transform="translate(0 -4)" style="fill:#0b89dd" />
+                <path d="M32.8,23.49,24,19.08l-8.82,4.41L24,27.9ZM31,25.91l1.77.89L24,31.21,15.16,26.8l1.76-.89L24,29.44Zm0,3.31,1.77.88L24,34.51,15.16,30.1l1.76-.88L24,32.75Z"
+                  transform="translate(0 -4)" style="fill:#fafafa" />
+              </g>
+              <text transform="translate(39.5 28.98)" style="font-size:18px;fill:#fafafa;font-family:rounded-l-mplus-1c-medium,'Rounded-L M+ 1c';font-weight:500">一覧を表示</text>
+            </g>
+          </g> -->
+        </g>
+
+        <g id="cbox-grid-group" transform="matrix(1, 0, 0, 1, 841.13, 498)" class="btn-pointer">
+          <rect x="0" y="0" width="100" height="30" fill="yellow" opacity="0.001"></rect>
+          <g id="cbox-grid-true">
+            <defs>
+              <style>
+                #cbox-grid-true .cls-1,
+                #cbox-grid-true .cls-3 {
+                  fill: none;
+                }
+
+                #cbox-grid-true .cls-2 {
+                  fill: #0b89dd;
+                }
+
+                #cbox-grid-true .cls-3 {
+                  stroke: #0b89dd;
+                  stroke-miterlimit: 10;
+                  stroke-width: 4px;
+                }
+
+                #cbox-grid-true .cls-4 {
+                  font-size: 18px;
+                  font-family: rounded-mplus-1p-medium, rounded mplus-1p-medium;
+                  font-weight: 500;
+                }
+              </style>
+            </defs>
+            <g data-name="Layer 2">
+              <g id="buttons">
+                <g>
+                  <rect class="cls-1" width="100" height="27" />
+                  <path class="cls-2"
+                    d="M22,3.26a2,2,0,0,1,2,2V21.74a2,2,0,0,1-2,2H5a2,2,0,0,1-2-2V5.26a2,2,0,0,1,2-2H22m0-3H5a5,5,0,0,0-5,5V21.74a5,5,0,0,0,5,5H22a5,5,0,0,0,5-5V5.26a5,5,0,0,0-5-5Z" />
+                  <polyline class="cls-3" points="6.45 9.6 11.28 17.6 21.09 7.15" />
+                  <text class="cls-4" transform="translate(40 20.48)">格子線</text>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g id="cbox-grid-false">
+            <defs>
+              <style>
+                #cbox-grid-false .cls-1 {
+                  fill: none;
+                }
+
+                #cbox-grid-false .cls-2 {
+                  font-size: 18px;
+                  font-family: rounded-mplus-1p-medium, rounded mplus-1p-medium;
+                  font-weight: 500;
+                }
+
+                #cbox-grid-false .cls-3 {
+                  fill: #0b89dd;
+                }
+              </style>
+            </defs>
+            <g data-name="Layer 2">
+              <g id="buttons">
+                <g>
+                  <g>
+                    <rect class="cls-1" width="100" height="27" />
+                    <text class="cls-2" transform="translate(40 20.48)">格子線</text>
+                  </g>
+                  <path class="cls-3"
+                    d="M22,3.26a2,2,0,0,1,2,2V21.74a2,2,0,0,1-2,2H5a2,2,0,0,1-2-2V5.26a2,2,0,0,1,2-2H22m0-3H5a5,5,0,0,0-5,5V21.74a5,5,0,0,0,5,5H22a5,5,0,0,0,5-5V5.26a5,5,0,0,0-5-5Z" />
+                </g>
+              </g>
+            </g>
+          </g>
+
+        </g>
+
+        <g id="btn-next-back">
+          <defs>
+            <style>
+              #btn-next-back .cls-5 {
+                fill: transparent;
+              }
+
+              #btn-next-back .cls-4 {
+                stroke-miterlimit: 10;
+                stroke: #0b89dd;
+                fill: #0b89dd;
+                stroke-width: 2px;
+              }
+
+              #btn-next-back .cls-5i {
+                fill: transparent;
+              }
+
+              #btn-next-back .cls-4i {
+                stroke-miterlimit: 10;
+                fill: #b3b3b3;
+                stroke: #b3b3b3;
+                stroke-width: 2px;
+              }
+            </style>
+          </defs>
+
+          <g id="btn-drawing-next-group">
+            <g id="btn-drawing-next-inactive" transform="matrix(1, 0, 0, 1, 242.25, 63)">
+              <path class="cls-4i" d="M337.06,527.16a14.37,14.37,0,0,1,8.13,7.45l5.41-2.53-3.7,10.15-10.15-3.69,5.18-2.41a10.8,10.8,0,1,0-19.27,9.73l-3.16,1.72a14.4,14.4,0,0,1,17.56-20.42Z" />
+              <rect class="cls-5i" x="312.76" y="519" width="40" height="40" transform="translate(665.51 1078) rotate(-180)" />
+            </g>
+            <g id="btn-drawing-next-active" transform="matrix(1, 0, 0, 1, 242.25, 63)" class="btn-pointer">
+              <rect x="310" y="520" width="45" height="30" fill="yellow" opacity="0.01"></rect>
+              <path class="cls-4" d="M337.06,527.16a14.37,14.37,0,0,1,8.13,7.45l5.41-2.52-3.7,10.14-10.15-3.69,5.18-2.41a10.8,10.8,0,1,0-19.27,9.73l-3.16,1.72a14.4,14.4,0,0,1,17.56-20.42Z" />
+              <rect class="cls-5" x="312.76" y="519" width="40" height="40" transform="translate(665.51 1078) rotate(-180)" />
+            </g>
+          </g>
+          <g id="btn-drawing-back-group">
+            <g id="btn-drawing-back-inactive" transform="matrix(1, 0, 0, 1, 242.25, 63)">
+              <path class="cls-4i" d="M208.45,527.16a14.37,14.37,0,0,0-8.13,7.45l-5.41-2.53,3.7,10.15,10.15-3.69-5.18-2.41a10.8,10.8,0,1,1,19.27,9.73l3.16,1.72a14.4,14.4,0,0,0-17.56-20.42Z" />
+              <rect class="cls-5i" x="192.76" y="519" width="40" height="40" />
+            </g>
+            <g id="btn-drawing-back-active" transform="matrix(1, 0, 0, 1, 242.25, 63)" class="btn-pointer">
+              <rect x="190" y="520" width="45" height="30" fill="yellow" opacity="0.01"></rect>
+              <path class="cls-4" d="M208.45,527.16a14.37,14.37,0,0,0-8.13,7.45l-5.41-2.52,3.7,10.14,10.15-3.69-5.18-2.41a10.8,10.8,0,1,1,19.27,9.73l3.16,1.72a14.4,14.4,0,0,0-17.56-20.42Z" />
+              <rect class="cls-5" x="192.76" y="519" width="40" height="40" />
+            </g>
+          </g>
+        </g>
+
+        <g id="btn-drawing-delete-group" class="btn-pointer">
+          <g id="btn-drawing-delete-inactive" transform="matrix(1, 0, 0, 1, 865.61, 377.81)">
+            <polygon points="33 7.5 33 1.5 21 1.5 21 7.5 1.5 7.5 1.5 13.5 3 13.5 7 60.5 8 60.5 8 66.5 46 66.5 46 60.5 47 60.5 51 13.5 52.5 13.5 52.5 7.5 33 7.5" style="fill:#fafafa" />
+            <rect x="21" y="1.5" width="12" height="6" style="fill:none;stroke:#0b89dd;stroke-linejoin:round;stroke-width:3px" />
+            <rect x="1.5" y="7.5" width="51" height="6" style="fill:none;stroke:#0b89dd;stroke-linejoin:round;stroke-width:3px" />
+            <polygon points="51 13.5 47 60.5 46.5 60.5 46 60.5 46 63.5 46 66.5 8 66.5 8 63.5 8 60.5 7.5 60.5 7 60.5 3 13.5 51 13.5"
+              style="fill:none;stroke:#0b89dd;stroke-linejoin:round;stroke-width:3px" />
+            <line x1="46" y1="60.5" x2="8" y2="60.5" style="fill:none;stroke:#0b89dd;stroke-linejoin:round" />
+            <line x1="27.02" y1="53.72" x2="27.02" y2="21.72" style="fill:none;stroke:#0b89dd;stroke-linecap:round;stroke-linejoin:round" />
+            <line x1="16.8" y1="53.74" x2="14.77" y2="21.75" style="fill:none;stroke:#0b89dd;stroke-linecap:round;stroke-linejoin:round" />
+            <line x1="37.23" y1="53.74" x2="39.26" y2="21.75" style="fill:none;stroke:#0b89dd;stroke-linecap:round;stroke-linejoin:round" />
+          </g>
+
+          <g id="btn-drawing-delete-active" transform="matrix(1, 0, 0, 1, 865.61, 377.81)">
+            <rect x="21" y="1.5" width="12" height="6" style="fill:#fafafa;stroke:#0b89dd;stroke-linejoin:round;stroke-width:3px" />
+            <polygon points="1.5 7.5 1.5 13.5 3 13.5 7 60.5 8 60.5 8 66.5 46 66.5 46 60.5 47 60.5 51 13.5 52.5 13.5 52.5 7.5 1.5 7.5"
+              style="fill:#0b89dd;stroke:#0b89dd;stroke-linejoin:round;stroke-width:3px" />
+            <line x1="46" y1="60.5" x2="8" y2="60.5" style="fill:none;stroke:#fafafa;stroke-linecap:round;stroke-linejoin:round" />
+            <line x1="27.02" y1="53.72" x2="27.02" y2="21.72" style="fill:none;stroke:#fafafa;stroke-linecap:round;stroke-linejoin:round" />
+            <line x1="16.8" y1="53.74" x2="14.77" y2="21.75" style="fill:none;stroke:#fafafa;stroke-linecap:round;stroke-linejoin:round" />
+            <line x1="37.23" y1="53.74" x2="39.26" y2="21.75" style="fill:none;stroke:#fafafa;stroke-linecap:round;stroke-linejoin:round" />
+            <line x1="3" y1="13.5" x2="51" y2="13.5" style="fill:none;stroke:#fafafa;stroke-linecap:round;stroke-linejoin:round" />
+          </g>
+        </g>
+
+        <g id="btn-drawing-save-group">
+          <g id="btn-drawing-save-inactive" transform="matrix(1, 0, 0, 1, 818.13, 569)"  class="btn-pointer">
+            <defs>
+              <clipPath id="clip-path-011" transform="translate(0 0)">
+                <rect width="146" height="48" style="fill:none" />
+              </clipPath>
+            </defs>
+            <g data-name="Layer 2">
+              <g id="buttons">
+                <g id="再開">
+                  <g style="clip-path:url(#clip-path-011)">
+                    <g style="clip-path:url(#clip-path-011)">
+                      <path d="M132,48H14A14,14,0,0,1,0,34V18A14,14,0,0,1,14,4H132a14,14,0,0,1,14,14V34a14,14,0,0,1-14,14" transform="translate(0 0)" style="fill:#ccc" />
+                      <rect x="1.5" y="1.5" width="143" height="41" rx="12.5" style="fill:#fafafa" />
+                      <path
+                        d="M132,3a11,11,0,0,1,11,11V30a11,11,0,0,1-11,11H14A11,11,0,0,1,3,30V14A11,11,0,0,1,14,3H132m0-3H14A14,14,0,0,0,0,14V30A14,14,0,0,0,14,44H132a14,14,0,0,0,14-14V14A14,14,0,0,0,132,0Z"
+                        transform="translate(0 0)" style="fill:#0b89dd" />
+                      <path d="M33.21,16.65l-7.87,7.88-3.68-3.68L19,23.48l6.3,6.3,10.5-10.5Z" transform="translate(0 0)" style="fill:#0b89dd" />
+                    </g>
+                    <text transform="translate(58 28.98)" style="font-size:18px;fill:#0b89dd;font-family:rounded-l-mplus-1c-medium, 'Rounded-L M+1c';font-weight:500;letter-spacing:0.22200520833333334em">決定</text>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+
+          <g id="btn-drawing-save-active" transform="matrix(1, 0, 0, 1, 818.13, 569)"  class="btn-pointer">
+            <defs>
+              <clipPath id="clip-path-012" transform="translate(0 -4)">
+                <rect width="146" height="48" style="fill:none" />
+              </clipPath>
+            </defs>
+            <g data-name="Layer 2">
+              <g id="buttons">
+                <g id="再開">
+                  <g style="clip-path:url(#clip-path-012)">
+                    <g style="clip-path:url(#clip-path-012)">
+                      <path d="M132,4H14A14,14,0,0,0,0,18V34A14,14,0,0,0,14,48H132a14,14,0,0,0,14-14V18A14,14,0,0,0,132,4" transform="translate(0 -4)" style="fill:#0b89dd" />
+                      <path d="M33.21,20.65l-7.87,7.88-3.68-3.68L19,27.48l6.3,6.3,10.5-10.5Z" transform="translate(0 -4)" style="fill:#fafafa" />
+                    </g>
+                    <text transform="translate(58 28.98)" style="font-size:18px;fill:#fafafa;font-family:rounded-l-mplus-1c-medium, 'Rounded-L M+1c';font-weight:500;letter-spacing:0.22200520833333334em">決定</text>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+
+          <g id="btn-drawing-save-disabled" transform="matrix(1, 0, 0, 1, 818.13, 569)" class="btn-disabled">
+            <defs>
+              <clipPath id="clip-path-013" transform="translate(0 0)">
+                <rect width="146" height="48" style="fill:none" />
+              </clipPath>
+            </defs>
+            <g data-name="Layer 2">
+              <g id="buttons">
+                <g id="再開">
+                  <g style="clip-path:url(#clip-path-013)">
+                    <g style="clip-path:url(#clip-path-013)">
+                      <path d="M132,48H14A14,14,0,0,1,0,34V18A14,14,0,0,1,14,4H132a14,14,0,0,1,14,14V34a14,14,0,0,1-14,14" transform="translate(0 0)" style="fill:#ccc" />
+                      <rect x="1.5" y="1.5" width="143" height="41" rx="12.5" style="fill:#f2f2f2" />
+                      <path
+                        d="M132,3a11,11,0,0,1,11,11V30a11,11,0,0,1-11,11H14A11,11,0,0,1,3,30V14A11,11,0,0,1,14,3H132m0-3H14A14,14,0,0,0,0,14V30A14,14,0,0,0,14,44H132a14,14,0,0,0,14-14V14A14,14,0,0,0,132,0Z"
+                        transform="translate(0 0)" style="fill:#b3b3b3" />
+                      <path d="M33.21,16.65l-7.87,7.88-3.68-3.68L19,23.48l6.3,6.3,10.5-10.5Z" transform="translate(0 0)" style="fill:#b3b3b3" />
+                    </g>
+                    <text transform="translate(58 28.98)" style="font-size:18px;fill:#b3b3b3;font-family:rounded-l-mplus-1c-medium, 'Rounded-L M+1c';font-weight:500;letter-spacing:0.22200520833333334em">決定</text>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+
+        </g>
+
+        <g id="canva" transform="matrix(1, 0, 0, 1, 328, 63)">
+          <defs>
+            <style>
+              #canva .cls-1,
+              #canva .cls-3,
+              #canva .cls-5 {
+                fill: none;
+              }
+
+              #canva .cls-1 {
+                stroke: #4dc4ff;
+              }
+
+              #canva .cls-1,
+              #canva .cls-3,
+              #canva .cls-4 {
+                stroke-miterlimit: 10;
+              }
+
+              #canva .cls-2 {
+                fill: #ccc;
+              }
+
+              #canva .cls-3 {
+                stroke: #000;
+                stroke-width: 4px;
+              }
+
+              #canva .cls-4,
+              #canva .cls-6 {
+                fill: #0b89dd;
+              }
+
+              #canva .cls-4 {
+                stroke: #0b89dd;
+                stroke-width: 2px;
+              }
+
+              #canva .cls-7 {
+                fill: #fff;
+              }
+
+              #canva .cls-8 {
+                fill: #fafafa;
+              }
+
+              #canva .cls-5i {
+                fill: none;
+              }
+
+              #canva .cls-4i {
+                stroke-miterlimit: 10;
+                fill: #b3b3b3;
+                stroke: #b3b3b3;
+                stroke-width: 2px;
+              }
+            </style>
+          </defs>
+          <g>
+            <g id="drawing-grid">
+              <line class="cls-1" x1="299.26" y1="508" x2="299.26" y2="4"/>
+              <line class="cls-1" x1="327.26" y1="508" x2="327.26" y2="4"/>
+              <line class="cls-1" x1="271.26" y1="508" x2="271.26" y2="4"/>
+              <line class="cls-1" x1="243.26" y1="508" x2="243.26" y2="4"/>
+              <line class="cls-1" x1="215.26" y1="508" x2="215.26" y2="4"/>
+              <line class="cls-1" x1="187.26" y1="508" x2="187.26" y2="4"/>
+              <line class="cls-1" x1="159.26" y1="508" x2="159.26" y2="4"/>
+              <line class="cls-1" x1="131.26" y1="508" x2="131.26" y2="4"/>
+              <line class="cls-1" x1="103.26" y1="508" x2="103.26" y2="4"/>
+              <line class="cls-1" x1="75.26" y1="508" x2="75.26" y2="4"/>
+              <line class="cls-1" x1="47.26" y1="508" x2="47.26" y2="4"/>
+              <line class="cls-1" x1="19.26" y1="508" x2="19.26" y2="4"/>
+              <line class="cls-1" x1="19.26" y1="480" x2="355.26" y2="480"/>
+              <line class="cls-1" x1="19.26" y1="452" x2="355.26" y2="452"/>
+              <line class="cls-1" x1="19.26" y1="424" x2="355.26" y2="424"/>
+              <line class="cls-1" x1="19.26" y1="396" x2="355.26" y2="396"/>
+              <line class="cls-1" x1="19.26" y1="368" x2="355.26" y2="368"/>
+              <line class="cls-1" x1="19.26" y1="340" x2="355.26" y2="340"/>
+              <line class="cls-1" x1="19.26" y1="312" x2="355.26" y2="312"/>
+              <line class="cls-1" x1="19.26" y1="284" x2="355.26" y2="284"/>
+              <line class="cls-1" x1="19.26" y1="256" x2="355.26" y2="256"/>
+              <line class="cls-1" x1="19.26" y1="228" x2="355.26" y2="228"/>
+              <line class="cls-1" x1="19.26" y1="200" x2="355.26" y2="200"/>
+              <line class="cls-1" x1="19.26" y1="172" x2="355.26" y2="172"/>
+              <line class="cls-1" x1="19.26" y1="144" x2="355.26" y2="144"/>
+              <line class="cls-1" x1="19.26" y1="116" x2="355.26" y2="116"/>
+              <line class="cls-1" x1="19.26" y1="88" x2="355.26" y2="88"/>
+              <line class="cls-1" x1="19.26" y1="60" x2="355.26" y2="60"/>
+              <line class="cls-1" x1="19.26" y1="32" x2="355.26" y2="32"/>
+            </g>
+            <g id="shape">
+              <path class="cls-2" d="M355.26,4V508h-336V4h336m0-4h-336a4,4,0,0,0-4,4V508a4,4,0,0,0,4,4h336a4,4,0,0,0,4-4V4a4,4,0,0,0-4-4Z"/>
+              <line class="cls-3" x1="357.26" y1="508" x2="357.26" y2="4"/>
+            </g>
+            <g id="grid-line-group" transform="matrix(1, 0, 0, 1, 20.76, 4)"></g>
+            <g id="grid-point-group" transform="matrix(1, 0, 0, 1, 20.76, 4)"></g>
+            <g id="drawing-area">
+              <rect x="10" y="-6" width="354" height="520" fill="yellow" opacity="0.001"></rect>
+              <!-- <rect x="20.76" y="4" width="340" height="504" fill="yellow" opacity="0.1"></rect> -->
+            </g>
+          </g>
+        </g>
+
+        <g id="text-finish-drawing" transform="matrix(1, 0, 0, 1, 430, 585)">
+          <defs>
+            <style>
+              #text-finish-drawing .cls-1 {
+                font-size: 16px;
+                font-family: rounded-mplus-1p-regular, rounded mplus-1p-regular;
+              }
+        
+              #text-finish-drawing .cls-2 {
+                letter-spacing: -0.02em;
+              }
+        
+              #text-finish-drawing .cls-3 {
+                letter-spacing: -0.04em;
+              }
+        
+              #text-finish-drawing .cls-4 {
+                letter-spacing: -0.04em;
+              }
+        
+              #text-finish-drawing .cls-5 {
+                letter-spacing: -0.12em;
+              }
+        
+              #text-finish-drawing .cls-6 {
+                letter-spacing: -0.09em;
+              }
+        
+              #text-finish-drawing .cls-7 {
+                letter-spacing: -0.14em;
+              }
+        
+              #text-finish-drawing .cls-8 {
+                letter-spacing: -0.05em;
+              }
+        
+              #text-finish-drawing .cls-9 {
+                letter-spacing: -0.01em;
+              }
+        
+              #text-finish-drawing .cls-10 {
+                letter-spacing: -0.48em;
+              }
+            </style>
+          </defs>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="buttons">
+              <rect x="-20" y="-10" width="210" height="60" fill="yellow" opacity="0.01"></rect>
+              <text class="cls-1" transform="translate(0 21.12)"  style="font-size:16px;font-family:rounded-l-mplus-1c-medium,'Rounded-L M+ 1c';">書き込みが完了しました。</text>
+            </g>
+          </g>
+        </g>
+
+        <g id="popup-delete-group">
+          <g id="popup-background">
+            <rect x="0" y="0" width="1024" height="648" fill="#000" opacity="0.6"></rect>
+          </g>
+          <g id="popup" transform="matrix(1, 0, 0, 1, 192, 172)">
+            <defs>
+              <style>
+                #popup-delete-group .cls-1 {
+                  fill: none;
+                }
+
+                #popup-delete-group .cls-2 {
+                  fill: #fafafa;
+                }
+
+                #popup-delete-group .cls-3,
+                #popup-delete-group .cls-6,
+                #popup-delete-group .cls-8,
+                #popup-delete-group .cls-9 {
+                  fill: #0b89dd;
+                }
+
+                #popup-delete-group .cls-4 {
+                  clip-path: url(#clip-path-popup-delete);
+                }
+
+                #popup-delete-group .cls-5 {
+                  fill: #ccc;
+                }
+
+                #popup-delete-group .cls-6,
+                #popup-delete-group .cls-8 {
+                  font-size: 18px;
+                  font-family: rounded-l-mplus-1c-medium, rounded l-mplus-1c-medium;
+                  font-weight: 500;
+                }
+
+                #popup-delete-group .cls-6 {
+                  letter-spacing: 0.22em;
+                }
+
+                #popup-delete-group .cls-7 {
+                  clip-path: url(#clip-path-100);
+                }
+
+                #popup-delete-group .cls-9 {
+                  font-size: 36px;
+                  font-family: rounded-mplus-1p-bold, rounded mplus-1p-bold;
+                  font-weight: 700;
+                }
+
+                #popup-delete-group .cls-10,
+                #popup-delete-group .cls-11,
+                #popup-delete-group .cls-12,
+                #popup-delete-group .cls-13,
+                #popup-delete-group .cls-14,
+                #popup-delete-group .cls-15,
+                #popup-delete-group .cls-16,
+                #popup-delete-group .cls-17 {
+                  font-size: 25px;
+                }
+
+                #popup-delete-group .cls-10 {
+                  letter-spacing: -0.02em;
+                }
+
+                #popup-delete-group .cls-11 {
+                  letter-spacing: -0.11em;
+                }
+
+                #popup-delete-group .cls-12,
+                #popup-delete-group .cls-21 {
+                  letter-spacing: -0.05em;
+                }
+
+                #popup-delete-group .cls-13,
+                #popup-delete-group .cls-26 {
+                  letter-spacing: -0.15em;
+                }
+
+                #popup-delete-group .cls-14 {
+                  letter-spacing: -0.12em;
+                }
+
+                #popup-delete-group .cls-15 {
+                  letter-spacing: -0.1em;
+                }
+
+                #popup-delete-group .cls-16 {
+                  letter-spacing: -0.48em;
+                }
+
+                #popup-delete-group .cls-18 {
+                  letter-spacing: -0.02em;
+                }
+
+                #popup-delete-group .cls-19 {
+                  letter-spacing: -0.04em;
+                }
+
+                #popup-delete-group .cls-20 {
+                  letter-spacing: -0.03em;
+                }
+
+                #popup-delete-group .cls-22 {
+                  letter-spacing: -0.04em;
+                }
+
+                #popup-delete-group .cls-23 {
+                  letter-spacing: -0.01em;
+                }
+
+                #popup-delete-group .cls-24 {
+                  letter-spacing: -0.08em;
+                }
+
+                #popup-delete-group .cls-25 {
+                  letter-spacing: -0.12em;
+                }
+
+                #popup-delete-group .cls-27 {
+                  letter-spacing: -0.05em;
+                }
+
+                #popup-delete-group .cls-28 {
+                  letter-spacing: -0.17em;
+                }
+              </style>
+              <clipPath id="clip-path-popup-delete">
+                <rect class="cls-1" x="134" y="188" width="146" height="48" />
+              </clipPath>
+              <clipPath id="clip-path-100">
+                <rect class="cls-1" x="360" y="188" width="146" height="48" />
+              </clipPath>
+            </defs>
+            <g data-name="Layer 2">
+              <g id="buttons">
+                <g>
+                  <rect class="cls-2" x="2" y="2" width="636" height="286" />
+                  <path class="cls-3" d="M636,4V286H4V4H636m4-4H0V290H640V0Z" />
+                </g>
+                <text class="cls-9" transform="translate(95 111.16)">削除してもよろしいですか？</text>
+              </g>
+            </g>
+          </g>
+          <g id="btn-popup-delete-true" class="btn-pointer">
+            <g id="btn-popup-delete-true-inactive" class="cls-4" transform="matrix(1, 0, 0, 1, 192, 172)">
+              <g class="cls-4">
+                <path class="cls-5" d="M266,236H148a14,14,0,0,1-14-14V206a14,14,0,0,1,14-14H266a14,14,0,0,1,14,14v16a14,14,0,0,1-14,14" />
+                <g>
+                  <rect class="cls-2" x="135.5" y="189.5" width="143" height="41" rx="12.5" />
+                  <path class="cls-3"
+                    d="M266,191a11,11,0,0,1,11,11v16a11,11,0,0,1-11,11H148a11,11,0,0,1-11-11V202a11,11,0,0,1,11-11H266m0-3H148a14,14,0,0,0-14,14v16a14,14,0,0,0,14,14H266a14,14,0,0,0,14-14V202a14,14,0,0,0-14-14Z" />
+                </g>
+              </g>
+              <text class="cls-6" transform="translate(187 216.98)">はい</text>
+            </g>
+            <g id="btn-popup-delete-true-active" transform="matrix(1, 0, 0, 1, 327.5, 361.5)">
+              <defs>
+                <clipPath id="clip-path-114" transform="translate(0 -4)">
+                  <rect width="146" height="48" style="fill:none" />
+                </clipPath>
+              </defs>
+              <g data-name="Layer 2">
+                <g id="buttons">
+                  <g id="再開">
+                    <g style="clip-path:url(#clip-path-114)">
+                      <g style="clip-path:url(#clip-path-114)">
+                        <path d="M132,4H14A14,14,0,0,0,0,18V34A14,14,0,0,0,14,48H132a14,14,0,0,0,14-14V18A14,14,0,0,0,132,4" transform="translate(0 -4)" style="fill:#0b89dd" />
+                      </g>
+                      <text transform="translate(53 28.98)" style="font-size:18px;fill:#fafafa;font-family:rounded-mplus-1c-medium, 'Rounded-L M+
+                        1c';font-weight:500;letter-spacing:0.22200520833333334em">はい</text>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g id="btn-popup-delete-false" class="btn-pointer">
+            <g id="btn-popup-delete-false-inactive" class="cls-7" transform="matrix(1, 0, 0, 1, 192, 172)">
+              <g class="cls-7">
+                <path class="cls-5" d="M492,236H374a14,14,0,0,1-14-14V206a14,14,0,0,1,14-14H492a14,14,0,0,1,14,14v16a14,14,0,0,1-14,14" />
+                <g>
+                  <rect class="cls-2" x="361.5" y="189.5" width="143" height="41" rx="12.5" />
+                  <path class="cls-3"
+                    d="M492,191a11,11,0,0,1,11,11v16a11,11,0,0,1-11,11H374a11,11,0,0,1-11-11V202a11,11,0,0,1,11-11H492m0-3H374a14,14,0,0,0-14,14v16a14,14,0,0,0,14,14H492a14,14,0,0,0,14-14V202a14,14,0,0,0-14-14Z" />
+                </g>
+              </g>
+              <text class="cls-8" transform="translate(406 216.98)">いいえ</text>
+            </g>
+            <g id="btn-popup-delete-false-active" transform="matrix(1, 0, 0, 1, 553.5, 361.5)">
+              <defs>
+                <clipPath id="clip-path-115" transform="translate(0 -4)">
+                  <rect width="146" height="48"  />
+                </clipPath>
+              </defs>
+              <g data-name="Layer 2">
+                <g id="buttons">
+                  <g id="再開">
+                    <g style="clip-path:url(#clip-path-115)">
+                      <g style="clip-path:url(#clip-path-115)">
+                        <path d="M132,4H14A14,14,0,0,0,0,18V34A14,14,0,0,0,14,48H132a14,14,0,0,0,14-14V18A14,14,0,0,0,132,4" transform="translate(0 -4)" style="fill:#0b89dd" />
+                      </g>
+                      <text transform="translate(46 28.98)" style="font-size:18px;fill:#fafafa;font-family:rounded-mplus-1c-medium,'Rounded-L M+ 1c';font-weight:500">いいえ</text>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+
+        <g id="popup-toggle-grid-group">
+          <g id="popup-toggle-grid-background">
+            <rect x="0" y="0" width="1024" height="648" fill="#000" opacity="0.6"></rect>
+          </g>
+          <g id="popup" transform="matrix(1, 0, 0, 1, 192, 172)">
+            <defs>
+              <style>
+                #popup-toggle-grid-group .cls-1 {
+                  fill: none;
+                }
+
+                #popup-toggle-grid-group .cls-2 {
+                  fill: #fafafa;
+                }
+
+                #popup-toggle-grid-group .cls-3,
+                #popup-toggle-grid-group .cls-6,
+                #popup-toggle-grid-group .cls-8,
+                #popup-toggle-grid-group .cls-9 {
+                  fill: #0b89dd;
+                }
+
+                #popup-toggle-grid-group .cls-4 {
+                  clip-path: url(#clip-path-popup);
+                }
+
+                #popup-toggle-grid-group .cls-5 {
+                  fill: #ccc;
+                }
+
+                #popup-toggle-grid-group .cls-6,
+                #popup-toggle-grid-group .cls-8 {
+                  font-size: 18px;
+                  font-family: rounded-l-mplus-1c-medium, rounded l-mplus-1c-medium;
+                  font-weight: 500;
+                }
+
+                #popup-toggle-grid-group .cls-6 {
+                  letter-spacing: 0.22em;
+                }
+
+                #popup-toggle-grid-group .cls-7 {
+                  clip-path: url(#clip-path-3);
+                }
+
+                #popup-toggle-grid-group .cls-9 {
+                  font-size: 36px;
+                  font-family: rounded-mplus-1p-bold, rounded mplus-1p-bold;
+                  font-weight: 700;
+                }
+
+                #popup-toggle-grid-group .cls-10,
+                #popup-toggle-grid-group .cls-11,
+                #popup-toggle-grid-group .cls-12,
+                #popup-toggle-grid-group .cls-13,
+                #popup-toggle-grid-group .cls-14,
+                #popup-toggle-grid-group .cls-15,
+                #popup-toggle-grid-group .cls-16,
+                #popup-toggle-grid-group .cls-17 {
+                  font-size: 25px;
+                }
+
+                #popup-toggle-grid-group .cls-10 {
+                  letter-spacing: -0.02em;
+                }
+
+                #popup-toggle-grid-group .cls-11 {
+                  letter-spacing: -0.11em;
+                }
+
+                #popup-toggle-grid-group .cls-12,
+                #popup-toggle-grid-group .cls-21 {
+                  letter-spacing: -0.05em;
+                }
+
+                #popup-toggle-grid-group .cls-13,
+                #popup-toggle-grid-group .cls-26 {
+                  letter-spacing: -0.15em;
+                }
+
+                #popup-toggle-grid-group .cls-14 {
+                  letter-spacing: -0.12em;
+                }
+
+                #popup-toggle-grid-group .cls-15 {
+                  letter-spacing: -0.1em;
+                }
+
+                #popup-toggle-grid-group .cls-16 {
+                  letter-spacing: -0.48em;
+                }
+
+                #popup-toggle-grid-group .cls-18 {
+                  letter-spacing: -0.02em;
+                }
+
+                #popup-toggle-grid-group .cls-19 {
+                  letter-spacing: -0.04em;
+                }
+
+                #popup-toggle-grid-group .cls-20 {
+                  letter-spacing: -0.03em;
+                }
+
+                #popup-toggle-grid-group .cls-22 {
+                  letter-spacing: -0.04em;
+                }
+
+                #popup-toggle-grid-group .cls-23 {
+                  letter-spacing: -0.01em;
+                }
+
+                #popup-toggle-grid-group .cls-24 {
+                  letter-spacing: -0.08em;
+                }
+
+                #popup-toggle-grid-group .cls-25 {
+                  letter-spacing: -0.12em;
+                }
+
+                #popup-toggle-grid-group .cls-27 {
+                  letter-spacing: -0.05em;
+                }
+
+                #popup-toggle-grid-group .cls-28 {
+                  letter-spacing: -0.17em;
+                }
+              </style>
+              <clipPath id="clip-path-popup">
+                <rect class="cls-1" x="134" y="188" width="146" height="48" />
+              </clipPath>
+              <clipPath id="clip-path-3">
+                <rect class="cls-1" x="360" y="188" width="146" height="48" />
+              </clipPath>
+            </defs>
+            <g data-name="Layer 2">
+              <g id="buttons">
+                <g>
+                  <rect class="cls-2" x="2" y="2" width="636" height="286" />
+                  <path class="cls-3" d="M636,4V286H4V4H636m4-4H0V290H640V0Z" />
+                </g>
+                <text class="cls-9" transform="translate(144.5 111.16)">格子線表示<tspan class="cls-10" x="179.5" y="0">を</tspan>
+                  <tspan class="cls-11" x="204" y="0">切り</tspan>
+                  <tspan class="cls-12" x="248.5" y="0">替</tspan>
+                  <tspan class="cls-13" x="272.25" y="0">え</tspan>
+                  <tspan class="cls-14" x="293.5" y="0">る</tspan>
+                  <tspan class="cls-15" x="315.5" y="0">と</tspan>
+                  <tspan class="cls-16" x="338" y="0">、</tspan>
+                  <tspan class="cls-17">
+                    <tspan class="cls-18" x="-86.75" y="43.32">書</tspan>
+                    <tspan class="cls-19" x="-62.25" y="43.32">き</tspan>
+                    <tspan x="-38.25" y="43.32">込み情報が削</tspan>
+                    <tspan class="cls-20" x="111.75" y="43.32">除</tspan>
+                    <tspan class="cls-21" x="136" y="43.32">さ</tspan>
+                    <tspan class="cls-22" x="159.75" y="43.32">れま</tspan>
+                    <tspan class="cls-23" x="207.75" y="43.32">す</tspan>
+                    <tspan class="cls-24" x="232.5" y="43.32">が</tspan>
+                    <tspan class="cls-25" x="255.5" y="43.32">よ</tspan>
+                    <tspan class="cls-26" x="277.5" y="43.32">ろ</tspan>
+                    <tspan class="cls-27" x="298.75" y="43.32">し</tspan>
+                    <tspan class="cls-22" x="322.5" y="43.32">い</tspan>
+                    <tspan x="346.5" y="43.32">で</tspan>
+                    <tspan class="cls-23" x="371.5" y="43.32">す</tspan>
+                    <tspan class="cls-28" x="396.25" y="43.32">か？</tspan>
+                  </tspan>
+                </text>
+              </g>
+            </g>
+          </g>
+          <g id="btn-popup-true" class="btn-pointer">
+            <g id="btn-popup-true-inactive" class="cls-4" transform="matrix(1, 0, 0, 1, 192, 172)">
+              <g class="cls-4">
+                <path class="cls-5" d="M266,236H148a14,14,0,0,1-14-14V206a14,14,0,0,1,14-14H266a14,14,0,0,1,14,14v16a14,14,0,0,1-14,14" />
+                <g>
+                  <rect class="cls-2" x="135.5" y="189.5" width="143" height="41" rx="12.5" />
+                  <path class="cls-3"
+                    d="M266,191a11,11,0,0,1,11,11v16a11,11,0,0,1-11,11H148a11,11,0,0,1-11-11V202a11,11,0,0,1,11-11H266m0-3H148a14,14,0,0,0-14,14v16a14,14,0,0,0,14,14H266a14,14,0,0,0,14-14V202a14,14,0,0,0-14-14Z" />
+                </g>
+              </g>
+              <text class="cls-6" transform="translate(187 216.98)">はい</text>
+            </g>
+            <g id="btn-popup-true-active" transform="matrix(1, 0, 0, 1, 327.5, 361.5)">
+              <defs>
+                <clipPath id="clip-path-014" transform="translate(0 -4)">
+                  <rect width="146" height="48" style="fill:none" />
+                </clipPath>
+              </defs>
+              <g data-name="Layer 2">
+                <g id="buttons">
+                  <g id="再開">
+                    <g style="clip-path:url(#clip-path-014)">
+                      <g style="clip-path:url(#clip-path-014)">
+                        <path d="M132,4H14A14,14,0,0,0,0,18V34A14,14,0,0,0,14,48H132a14,14,0,0,0,14-14V18A14,14,0,0,0,132,4" transform="translate(0 -4)" style="fill:#0b89dd" />
+                      </g>
+                      <text transform="translate(53 28.98)" style="font-size:18px;fill:#fafafa;font-family:rounded-l-mplus-1c-medium, 'Rounded-L M+
+                        1c';font-weight:500;letter-spacing:0.22200520833333334em">はい</text>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+          <g id="btn-popup-false" class="btn-pointer">
+            <g id="btn-popup-false-inactive" class="cls-7" transform="matrix(1, 0, 0, 1, 192, 172)">
+              <g class="cls-7">
+                <path class="cls-5" d="M492,236H374a14,14,0,0,1-14-14V206a14,14,0,0,1,14-14H492a14,14,0,0,1,14,14v16a14,14,0,0,1-14,14" />
+                <g>
+                  <rect class="cls-2" x="361.5" y="189.5" width="143" height="41" rx="12.5" />
+                  <path class="cls-3"
+                    d="M492,191a11,11,0,0,1,11,11v16a11,11,0,0,1-11,11H374a11,11,0,0,1-11-11V202a11,11,0,0,1,11-11H492m0-3H374a14,14,0,0,0-14,14v16a14,14,0,0,0,14,14H492a14,14,0,0,0,14-14V202a14,14,0,0,0-14-14Z" />
+                </g>
+              </g>
+              <text class="cls-8" transform="translate(406 216.98)">いいえ</text>
+            </g>
+            <g id="btn-popup-false-active" transform="matrix(1, 0, 0, 1, 553.5, 361.5)">
+              <defs>
+                <clipPath id="clip-path-015" transform="translate(0 -4)">
+                  <rect width="146" height="48" style="fill:none" />
+                </clipPath>
+              </defs>
+              <g data-name="Layer 2">
+                <g id="buttons">
+                  <g id="再開">
+                    <g style="clip-path:url(#clip-path-015)">
+                      <g style="clip-path:url(#clip-path-015)">
+                        <path d="M132,4H14A14,14,0,0,0,0,18V34A14,14,0,0,0,14,48H132a14,14,0,0,0,14-14V18A14,14,0,0,0,132,4" transform="translate(0 -4)" style="fill:#0b89dd" />
+                      </g>
+                      <text transform="translate(46 28.98)" style="font-size:18px;fill:#fafafa;font-family:rounded-l-mplus-1c-medium,'Rounded-L M+ 1c';font-weight:500">いいえ</text>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+
+      <text id="log-text" x="100" y ="640" opacity="0">ABC</text>
+
+    </svg>
+
+  </div>
+  <script src="./js_build/config_svg.js"></script>
+  <script src="./js_build/config.js"></script>
+  <!-- <script src="./library/polyfill.min.js"></script> -->
+  <script src="./library/simplify.js"></script>
+  <script src="./library/jquery-2.x-git.min.js"></script>
+  <script src="./library/jquery-ui-1.12.1.min.js"></script>
+  <script src="./library/lodash.min.js"></script>
+  <script src="./library/bootstrap.min.js"></script>
+  <script src="./library/snap.svg-min.js"></script>
+  <script src="./js_build/autoResize.js"></script>
+  <script src="./library/lodash.min.js"></script>
+  <script src="./js_build/utils.js"></script>
+
+  <script src="./library/three.min.js"></script>
+  <!-- <script src="https://unpkg.com/threejs-meshline@2.0.11/src/index.js"></script> -->
+  <script src="./library/THREE.MeshLine.js"></script>
+  <script src="./library/js/renderers/Projector.js"></script>
+  <script src="./library/js/controls/OrbitControls.js"></script>
+  <script src="./library/js/controls/TrackballControls.js"></script>
+
+
+  <script src="./js_build/const.js"></script>
+  <script src="./js_build/math/point3D.js"></script>
+  <script src="./js_build/math/point2D.js"></script>
+  <script src="./js_build/math/shape3D.js"></script>
+  <script src="./js_build/math/mathLib.js"></script>
+  <script src="./js_build/svg/svgLib.js"></script>
+  <script src="./js_build/draw.js"></script>
+  <script src="./js_build/drawCanvas.js"></script>
+</body>
+
+</html>
+
+<!-- (C) 2020 Suken Shuppan. -->

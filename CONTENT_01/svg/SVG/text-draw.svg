@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="264.24" height="29.26" viewBox="0 0 264.24 29.26">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 24px;
+        font-family: rounded-mplus-1p-regular, rounded mplus-1p-regular;
+      }
+
+      .cls-2 {
+        letter-spacing: -0.02em;
+      }
+
+      .cls-3 {
+        letter-spacing: -0.04em;
+      }
+
+      .cls-4 {
+        letter-spacing: -0.04em;
+      }
+
+      .cls-5 {
+        letter-spacing: -0.12em;
+      }
+
+      .cls-6 {
+        letter-spacing: -0.09em;
+      }
+
+      .cls-7 {
+        letter-spacing: -0.14em;
+      }
+
+      .cls-8 {
+        letter-spacing: -0.05em;
+      }
+
+      .cls-9 {
+        letter-spacing: -0.01em;
+      }
+
+      .cls-10 {
+        letter-spacing: -0.48em;
+      }
+    </style>
+  </defs>
+  <title>text-draw</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="buttons">
+      <text class="cls-1" transform="translate(0 21.12)"><tspan class="cls-2">書</tspan><tspan class="cls-3" x="23.52" y="0">き</tspan><tspan x="46.56" y="0">込みが</tspan><tspan class="cls-4" x="118.56" y="0">完</tspan><tspan class="cls-5" x="141.6" y="0">了</tspan><tspan class="cls-6" x="162.72" y="0">し</tspan><tspan class="cls-7" x="184.56" y="0">ま</tspan><tspan class="cls-8" x="205.2" y="0">し</tspan><tspan class="cls-9" x="228" y="0">た</tspan><tspan class="cls-10" x="251.76" y="0">。</tspan></text>
+    </g>
+  </g>
+</svg>

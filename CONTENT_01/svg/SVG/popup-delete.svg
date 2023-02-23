@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="290" viewBox="0 0 640 290">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fafafa;
+      }
+
+      .cls-2 {
+        fill: #0b89dd;
+      }
+    </style>
+  </defs>
+  <title>popup-delete</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="buttons">
+      <g>
+        <rect class="cls-1" x="2" y="2" width="636" height="286"/>
+        <path class="cls-2" d="M636,4V286H4V4H636m4-4H0V290H640V0Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

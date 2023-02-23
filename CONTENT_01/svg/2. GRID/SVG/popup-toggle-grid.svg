@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="640" height="290" viewBox="0 0 640 290">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #fafafa;
+      }
+
+      .cls-3, .cls-6, .cls-7 {
+        fill: #0b89dd;
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-5 {
+        fill: #ccc;
+      }
+
+      .cls-6 {
+        font-size: 18px;
+        font-family: rounded-l-mplus-1c-medium, rounded l-mplus-1c-medium;
+        font-weight: 500;
+        letter-spacing: 0.22em;
+      }
+
+      .cls-7 {
+        font-size: 36px;
+        font-family: rounded-mplus-1p-bold, rounded mplus-1p-bold;
+        font-weight: 700;
+      }
+
+      .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-8, .cls-9 {
+        font-size: 25px;
+      }
+
+      .cls-8 {
+        letter-spacing: -0.02em;
+      }
+
+      .cls-9 {
+        letter-spacing: -0.11em;
+      }
+
+      .cls-10, .cls-19 {
+        letter-spacing: -0.05em;
+      }
+
+      .cls-11, .cls-24 {
+        letter-spacing: -0.15em;
+      }
+
+      .cls-12 {
+        letter-spacing: -0.12em;
+      }
+
+      .cls-13 {
+        letter-spacing: -0.1em;
+      }
+
+      .cls-14 {
+        letter-spacing: -0.48em;
+      }
+
+      .cls-16 {
+        letter-spacing: -0.02em;
+      }
+
+      .cls-17 {
+        letter-spacing: -0.04em;
+      }
+
+      .cls-18 {
+        letter-spacing: -0.03em;
+      }
+
+      .cls-20 {
+        letter-spacing: -0.04em;
+      }
+
+      .cls-21 {
+        letter-spacing: -0.01em;
+      }
+
+      .cls-22 {
+        letter-spacing: -0.08em;
+      }
+
+      .cls-23 {
+        letter-spacing: -0.12em;
+      }
+
+      .cls-25 {
+        letter-spacing: -0.05em;
+      }
+
+      .cls-26 {
+        letter-spacing: -0.17em;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect class="cls-1" x="134" y="188" width="146" height="48"/>
+    </clipPath>
+  </defs>
+  <title>popup-toggle-grid</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="buttons">
+      <g>
+        <rect class="cls-2" x="2" y="2" width="636" height="286"/>
+        <path class="cls-3" d="M636,4V286H4V4H636m4-4H0V290H640V0Z"/>
+      </g>
+      <g id="再開">
+        <g class="cls-4">
+          <g class="cls-4">
+            <path class="cls-5" d="M266,236H148a14,14,0,0,1-14-14V206a14,14,0,0,1,14-14H266a14,14,0,0,1,14,14v16a14,14,0,0,1-14,14"/>
+            <g>
+              <rect class="cls-2" x="135.5" y="189.5" width="143" height="41" rx="12.5"/>
+              <path class="cls-3" d="M266,191a11,11,0,0,1,11,11v16a11,11,0,0,1-11,11H148a11,11,0,0,1-11-11V202a11,11,0,0,1,11-11H266m0-3H148a14,14,0,0,0-14,14v16a14,14,0,0,0,14,14H266a14,14,0,0,0,14-14V202a14,14,0,0,0-14-14Z"/>
+            </g>
+          </g>
+          <text class="cls-6" transform="translate(187 216.98)">はい</text>
+        </g>
+      </g>
+      <g id="再開-2" data-name="再開">
+        <g>
+          <rect class="cls-2" x="361.5" y="189.5" width="143" height="41" rx="12.5"/>
+          <path class="cls-3" d="M492,191a11,11,0,0,1,11,11v16a11,11,0,0,1-11,11H374a11,11,0,0,1-11-11V202a11,11,0,0,1,11-11H492m0-3H374a14,14,0,0,0-14,14v16a14,14,0,0,0,14,14H492a14,14,0,0,0,14-14V202a14,14,0,0,0-14-14Z"/>
+        </g>
+      </g>
+      <text class="cls-7" transform="translate(144.5 111.16)">格子線表示<tspan class="cls-8" x="179.5" y="0">を</tspan><tspan class="cls-9" x="204" y="0">切り</tspan><tspan class="cls-10" x="248.5" y="0">替</tspan><tspan class="cls-11" x="272.25" y="0">え</tspan><tspan class="cls-12" x="293.5" y="0">る</tspan><tspan class="cls-13" x="315.5" y="0">と</tspan><tspan class="cls-14" x="338" y="0">、</tspan><tspan class="cls-15"><tspan class="cls-16" x="-86.75" y="43.32">書</tspan><tspan class="cls-17" x="-62.25" y="43.32">き</tspan><tspan x="-38.25" y="43.32">込み情報が削</tspan><tspan class="cls-18" x="111.75" y="43.32">除</tspan><tspan class="cls-19" x="136" y="43.32">さ</tspan><tspan class="cls-20" x="159.75" y="43.32">れま</tspan><tspan class="cls-21" x="207.75" y="43.32">す</tspan><tspan class="cls-22" x="232.5" y="43.32">が</tspan><tspan class="cls-23" x="255.5" y="43.32">よ</tspan><tspan class="cls-24" x="277.5" y="43.32">ろ</tspan><tspan class="cls-25" x="298.75" y="43.32">し</tspan><tspan class="cls-20" x="322.5" y="43.32">い</tspan><tspan x="346.5" y="43.32">で</tspan><tspan class="cls-21" x="371.5" y="43.32">す</tspan><tspan class="cls-26" x="396.25" y="43.32">か？</tspan></tspan></text>
+    </g>
+  </g>
+</svg>

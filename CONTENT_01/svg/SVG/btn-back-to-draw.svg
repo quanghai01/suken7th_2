@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="44" viewBox="0 0 100 44">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ccc;
+      }
+
+      .cls-2 {
+        fill: #fafafa;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #0b89dd;
+      }
+
+      .cls-4 {
+        font-size: 18px;
+        font-family: rounded-l-mplus-1c-medium, rounded l-mplus-1c-medium;
+        font-weight: 500;
+      }
+    </style>
+  </defs>
+  <title>btn-back-to-draw</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="buttons">
+      <path class="cls-1" d="M100,24A20.06,20.06,0,0,1,80,44H20A20.06,20.06,0,0,1,0,24H0A20.06,20.06,0,0,1,20,4H80a20.06,20.06,0,0,1,20,20Z"/>
+      <g>
+        <path class="cls-2" d="M20,38.5a18.5,18.5,0,0,1,0-37H80a18.5,18.5,0,0,1,0,37Z"/>
+        <path class="cls-3" d="M80,3a17,17,0,0,1,0,34H20A17,17,0,0,1,20,3H80m0-3H20a20,20,0,0,0,0,40H80A20,20,0,0,0,80,0Z"/>
+      </g>
+      <g>
+        <polygon class="cls-3" points="23.34 23.05 26.32 21.57 36.74 11.15 35.25 9.66 24.83 20.08 23.34 23.05"/>
+        <path class="cls-3" d="M14.41,32,29.3,27.52l8.93-8.93V14.12L29.3,23.06l-1.81,3-6.35,2.31a5.64,5.64,0,0,0-3.08-3.08l2.31-6.35,3-1.81,8.93-8.93H27.81L18.88,17.1,14.41,32"/>
+      </g>
+      <text class="cls-4" transform="translate(46.17 26.15)">編集</text>
+    </g>
+  </g>
+</svg>

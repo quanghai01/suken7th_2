@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64.03 81.03">
+    <g style="isolation:isolate">
+        <g id="Layer_2" data-name="Layer 2">
+            <g xmlns="http://www.w3.org/2000/svg" id="shape">
+                <ellipse cx="28.86" cy="7" rx="12" ry="6" style="fill:#fcedd9;mix-blend-mode:multiply" />
+                <path
+                    d="M28.86,13c-6.63,0-12-2.69-12-6V47c0,3.31,5.37,6,12,6s12-2.69,12-6V7C40.86,10.31,35.49,13,28.86,13Z"
+                    style="mix-blend-mode:multiply;fill:#fcedd9" />
+                <path d="M40.86,7c0,3.31-5.37,6-12,6s-12-2.69-12-6"
+                    style="fill:none;stroke:#000;stroke-linejoin:round;stroke-width:2px" />
+                <path d="M16.86,47c0-3.31,5.37-6,12-6s12,2.69,12,6"
+                    style="fill:none;stroke:#000;stroke-linejoin:round;opacity:0.5" />
+                <path d="M16.86,47c0,3.31,5.37,6,12,6s12-2.69,12-6V7c0-3.31-5.37-6-12-6s-12,2.69-12,6Z"
+                    style="fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px" />
+            </g>
+            <g id="text"><text transform="translate(0.03 75.07)"
+                    style="font-size:16px;font-family:HiraKakuPro-W3-83pv-RKSJ-H, Hiragino Kaku Gothic Pro">組み立て</text>
+            </g>
+        </g>
+    </g>
+</svg>
